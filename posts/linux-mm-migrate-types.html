@@ -1,0 +1,126 @@
+<!doctype html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<title>Page migration types in Linux</title>
+<meta name="generator" content="Nue (nuejs.org)">
+<meta name="date.updated" content="2024-01-12T14:03:51.374Z">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="There are multiple migration types in Linux&apos;s memory management system. Do you know how each one of them is used?">
+<meta property="article:published_time" content="2024-01-08T08:00:00.000Z">
+<link rel="shortcut icon" type="image/jpg" src="/img/favicon.jpg">
+<link href="/global/global.css" rel="stylesheet">
+<link href="/posts/post.css" rel="stylesheet">
+<script src="/global/main.js" type="module"></script>
+<script src="/@nue/page-router.js" type="module"></script>
+    
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  </head>
+
+  <body>
+    <header class="flex">
+  <a class="flex homelink" href="/">
+    <img alt="Avatar image" width="64" height="64" src="/img/avatar.jpg">
+    <strong>Harlan V. Wei (aka. Wei Chen)</strong>
+  </a>
+  <nav>
+    <a target="_blank" href="mailto:contact@harlanwei.com">
+      <img class="icon" width="30" height="30" src="/img/email.svg" alt="My Email">
+    </a><a target="_blank" href="//twitter.com/imharlanwei">
+      <img class="icon" width="30" height="30" src="/img/twitter.svg" alt="Twitter profile">
+    </a><a target="_blank" href="//github.com/harlanwei/">
+      <img class="icon" width="30" height="30" src="/img/github.svg" alt="Github projects">
+    </a><a target="_blank" href="//www.linkedin.com/in/harlanwei/">
+      <img class="icon" width="30" height="30" src="/img/linkedin.svg" alt="LinkedIn profile">
+    </a>
+  </nav>
+</header>
+    <main lang="en">
+
+  <h1>Page migration types in Linux</h1>
+
+  <p>
+    <time>January 8, 2024</time>
+    <span> &#x2022; Photo credits: <a class="backlit" target="_blank" href="https://unsplash.com/@harrisonbroadbent">Harrison Broadbent on Unsplash</a></span>
+  </p>
+
+  <img class="hero" style="max-height: 400px; width: 100%; object-fit: cover;" src="https://images.unsplash.com/photo-1562976540-1502c2145186?w=640" alt="Hero image for Page migration types in Linux">
+
+  <article>
+    <p><strong>Page migration</strong> allows the moving of the physical location of pages (e.g. between <em>nodes</em> in a NUMA system) while the process is running. The main intention of page migration is to reduce the latency of memory access by moving pages near to the processor where the process accessing that memory is running.</p>
+<p>However, not all pages can be moved freely. For example, the kernel has to make sure a DMA page is always present at the specified location as long as it is mapped into the IOMMU. To distinguish which pages can be moved freely and which can not, Linux marks pages with <em>migration types</em>. You can think of migration type as an identifier to a certain migration policy.</p>
+<p>There are several migration types in Linux. The most important two are <code>MIGRATE_MOVABLE</code> and <code>MIGRATE_UNMOVABLE</code>. Apparently the former means this page can be moved freely while the latter does not. Generally speaking, programs in the user space allocate <code>MIGRATE_MOVABLE</code> pages, while the kernel allocates <code>MIGRATE_UNMOVABLE</code> pages.</p>
+<p>By default, all page blocks are initialized as <code>MIGRATE_MOVABLE</code> (see <code>deferred_free_range</code> in page_alloc.c). When pages of a certain migrate type is exhausted, Linux will convert pages (or page blocks) from another type into the desired type. This is called <em>stealing</em> sometimes. Below is a code snippet from Linux 6.1.52 that finds the proper fallback migration type for a request.</p>
+<pre><code class="language-c">// mm/page_alloc.c
+/*
+ * Check whether there is a suitable fallback freepage with requested order.
+ * If only_stealable is true, this function returns fallback_mt only if
+ * we can steal other freepages all together. This would help to reduce
+ * fragmentation due to mixed migratetype pages in one pageblock.
+ */
+int find_suitable_fallback(struct free_area *area, unsigned int order,
+                           int migratetype, bool only_stealable, bool *can_steal)
+{
+    int i;
+    int fallback_mt;
+
+    if (area-&gt;nr_free == 0)
+        return -1;
+
+    *can_steal = false;
+    for (i = 0;; i++) {
+        fallback_mt = fallbacks[migratetype][i];
+        if (fallback_mt == MIGRATE_TYPES)
+            break;
+
+        if (free_area_empty(area, fallback_mt))
+            continue;
+
+        if (can_steal_fallback(order, migratetype))
+            *can_steal = true;
+
+        if (!only_stealable)
+            return fallback_mt;
+
+        if (*can_steal)
+            return fallback_mt;
+    }
+
+    return -1;
+}
+</code></pre>
+<h2>When else do migration types matter?</h2>
+<p>There are a lot of situations where migration types matter. Some examples include:</p>
+<ul>
+<li><strong>Memory reclaiming</strong>: the process of freeing pages of type <code>MIGRATE_RECLAIMABLE</code>. It is quick and painless to free them, since their contents can be restored from disk blocks when needed. Each time two contiguous pages of the same order are reclaimed, they are merged into a page of the above order. This process is performed by the <em>kswapd</em> kernel thread.</li>
+<li><strong>Memory compaction</strong>: a more performance hitting process. It consists of seeking pages of <code>MIGRATE_MOVABLE</code> migration type from the bottom of the considered zone and, at the same time, scanning for free pages from the top of the zone; the process <em>shifts</em> the found pages of <code>MIGRATE_MOVABLE</code> migration type to the top: the straightforward outcome is increasing the number of the free pages on the bottom, and having all of the pages of <code>MIGRATE_MOVABLE</code> migration type on the top. This process, previously accomplished by <em>kswapd</em>, since Linux 4.6 is performed by a new dedicated kernel thread: <em>kcompactd</em>.</li>
+</ul>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.kernel.org/doc/html/v5.4/vm/page_migration.html">Page migration - kernel.org</a></li>
+<li><a href="https://grimoire.carcano.ch/blog/memory-management-the-buddy-allocator/">Linux Memory Management - The Buddy Allocator</a></li>
+</ol>
+
+  </article>
+</main>
+    <footer class="flex">
+  <a href="/">&#xa9; Harlan V. Wei (aka. Wei Chen)</a>
+  <strong></strong>
+</footer>
+  </body>
+
+</html>

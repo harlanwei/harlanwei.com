@@ -1,0 +1,507 @@
+<!doctype html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<title>Linux &#x7684;&#x8fdb;&#x7a0b;&#x521b;&#x5efa;&#x4e0e;&#x8c03;&#x5ea6;&#xff1a;&#x4ee3;&#x7801;&#x89e3;&#x8bfb;</title>
+<meta name="generator" content="Nue (nuejs.org)">
+<meta name="date.updated" content="2024-01-12T14:03:51.408Z">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="&#x9762;&#x5bf9;&#x590d;&#x6742;&#x7684;&#x5e94;&#x7528;&#x573a;&#x666f;&#xff0c;Linux &#x4ecd;&#x7136;&#x80fd;&#x591f;&#x975e;&#x5e38;&#x5feb;&#x901f;&#x5730;&#x5b8c;&#x6210;&#x8fdb;&#x7a0b;&#x7684;&#x521b;&#x5efa;&#xff0c;&#x5e76;&#x4e14;&#x5b9e;&#x73b0;&#x5927;&#x91cf;&#x8fdb;&#x7a0b;&#x7684;&#x5e76;&#x53d1;&#x8fd0;&#x884c;&#x3002;&#x8fd9;&#x7bc7;&#x6587;&#x7ae0;&#x5e26;&#x4f60;&#x5206;&#x6790; Linux &#x662f;&#x5982;&#x4f55;&#x5728;&#x4ee3;&#x7801;&#x5c42;&#x9762;&#x5b8c;&#x6210;&#x8fd9;&#x4e9b;&#x5de5;&#x4f5c;&#x7684;&#x3002;">
+<meta property="article:published_time" content="2021-10-22T20:00:00.000Z">
+<link rel="shortcut icon" type="image/jpg" src="/img/favicon.jpg">
+<link href="/global/global.css" rel="stylesheet">
+<link href="/posts/post.css" rel="stylesheet">
+<script src="/global/main.js" type="module"></script>
+<script src="/@nue/page-router.js" type="module"></script>
+    
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  </head>
+
+  <body>
+    <header class="flex">
+  <a class="flex homelink" href="/">
+    <img alt="Avatar image" width="64" height="64" src="/img/avatar.jpg">
+    <strong>Harlan V. Wei (aka. Wei Chen)</strong>
+  </a>
+  <nav>
+    <a target="_blank" href="mailto:contact@harlanwei.com">
+      <img class="icon" width="30" height="30" src="/img/email.svg" alt="My Email">
+    </a><a target="_blank" href="//twitter.com/imharlanwei">
+      <img class="icon" width="30" height="30" src="/img/twitter.svg" alt="Twitter profile">
+    </a><a target="_blank" href="//github.com/harlanwei/">
+      <img class="icon" width="30" height="30" src="/img/github.svg" alt="Github projects">
+    </a><a target="_blank" href="//www.linkedin.com/in/harlanwei/">
+      <img class="icon" width="30" height="30" src="/img/linkedin.svg" alt="LinkedIn profile">
+    </a>
+  </nav>
+</header>
+    <main lang="zh-Hans">
+
+  <h1>Linux &#x7684;&#x8fdb;&#x7a0b;&#x521b;&#x5efa;&#x4e0e;&#x8c03;&#x5ea6;&#xff1a;&#x4ee3;&#x7801;&#x89e3;&#x8bfb;</h1>
+
+  <p>
+    <time>October 23, 2021</time>
+    <span> &#x2022; Photo credits: <a class="backlit" target="_blank" href="https://unsplash.com/@sonjalangford">Sonja Langford on Unsplash</a></span>
+  </p>
+
+  <img class="hero" style="max-height: 400px; width: 100%; object-fit: cover;" src="https://images.unsplash.com/37/tEREUy1vSfuSu8LzTop3_IMG_2538.jpg?w=640" alt="Hero image for Linux &#x7684;&#x8fdb;&#x7a0b;&#x521b;&#x5efa;&#x4e0e;&#x8c03;&#x5ea6;&#xff1a;&#x4ee3;&#x7801;&#x89e3;&#x8bfb;">
+
+  <article>
+    <blockquote>
+<p>This post is only available in Chinese at this moment.</p>
+</blockquote>
+<p>&#x8fd9;&#x662f;&#x6211;&#x5728;&#x5b9e;&#x9a8c;&#x5ba4;&#x5b66;&#x4e60;&#x8fc7;&#x7a0b;&#x4e2d;&#x64b0;&#x5199;&#x7684;&#x8bfb;&#x4e66;&#x7b14;&#x8bb0;&#x7684;&#x4e00;&#x90e8;&#x5206;&#x3002;&#x4e0b;&#x9762;&#x7684;&#x5185;&#x5bb9;&#x57fa;&#x4e8e;&#x64b0;&#x6587;&#x65f6;&#x6700;&#x65b0;&#x7684; Linux 5.14.12 &#x8fdb;&#x884c;&#x5206;&#x6790;&#x3002;</p>
+<h2>&#x8fdb;&#x7a0b;&#x7684;&#x521b;&#x5efa;</h2>
+<blockquote>
+<p>Linux &#x7684;&#x4ee3;&#x7801;&#x6ca1;&#x6709;&#x5bf9;&#x8fdb;&#x7a0b;&#x548c;&#x7ebf;&#x7a0b;&#x4f5c;&#x660e;&#x663e;&#x7684;&#x533a;&#x5206;&#xff0c;&#x56e0;&#x6b64;&#x4e0b;&#x9762;&#x7edf;&#x4e00;&#x4f7f;&#x7528;&#x201c;&#x8fdb;&#x7a0b;&#x201d;&#x8fd9;&#x4e2a;&#x8bcd;&#x6765;&#x6307;&#x4ee3;&#x4e8c;&#x8005;&#xff0c;&#x5177;&#x4f53;&#x7684;&#x8bed;&#x4e49;&#x6839;&#x636e;&#x4e0a;&#x4e0b;&#x6587;&#x6765;&#x5224;&#x65ad;&#x3002;</p>
+</blockquote>
+<p>Linux &#x4e2d;&#x63d0;&#x4f9b;&#x4e86;&#x4e09;&#x4e2a;&#x4e0e;&#x8fdb;&#x7a0b;&#x521b;&#x5efa;&#x76f8;&#x5173;&#x7684;&#x7cfb;&#x7edf;&#x8c03;&#x7528;&#xff0c;&#x5373; fork&#x3001;vfork &#x548c; clone&#x3002;&#x4e09;&#x8005;&#x7684;&#x5b9a;&#x4e49;&#x90fd;&#x5728; <code>/kernel/fork.c</code> &#x6587;&#x4ef6;&#x4e2d;&#xff0c;&#x5982;&#xff1a;</p>
+<pre><code class="language-c">// /kernel/fork.c
+// &#x4e0b;&#x65b9;&#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;&#xff0c;&#x7701;&#x7565;&#x4e86;&#x7ed3;&#x6784;&#x4e0e;&#x914d;&#x7f6e;&#x76f8;&#x5173;&#x7684;&#x5b9a;&#x4e49;
+SYSCALL_DEFINE0(fork)
+{
+    struct kernel_clone_args args = {
+        .exit_signal = SIGCHLD,
+    };
+
+    return kernel_clone(&amp;args);
+}
+</code></pre>
+<p>&#x987a;&#x7740; <code>kernel_clone</code> &#x7684;&#x8c03;&#x7528;&#x5411;&#x4e0b;&#x8ffd;&#x8e2a;&#xff0c;&#x5219;&#x6709;&#xff1a;</p>
+<pre><code class="language-c">// /kernel/fork.c
+// &#x4e0b;&#x65b9;&#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;&#xff0c;&#x7701;&#x7565;&#x4e86;&#x53c2;&#x6570;&#x68c0;&#x67e5;&#x548c; trace &#x7b49;&#x5185;&#x5bb9;
+pid_t kernel_clone(struct kernel_clone_args *args)
+{
+    u64 clone_flags = args-&gt;flags;
+    struct task_struct *p;
+    p = copy_process(NULL, trace, NUMA_NO_NODE, args);
+    // ...
+    wake_up_new_task(p);
+    // ...
+}
+</code></pre>
+<p>&#x901a;&#x8fc7;&#x8fd9;&#x6bb5;&#x4ee3;&#x7801;&#x4e0d;&#x96be;&#x770b;&#x51fa;&#xff0c;<code>kernel_clone</code> &#x4e3b;&#x8981;&#x505a;&#x4e86;&#x4e24;&#x4ef6;&#x4e8b;&#xff1a;</p>
+<ol>
+<li>&#x590d;&#x5236;&#x8fdb;&#x7a0b;&#x672c;&#x8eab;&#xff1b;</li>
+<li>&#x5524;&#x9192;&#x65b0;&#x7684;&#x8fdb;&#x7a0b;&#x3002;</li>
+</ol>
+<p>&#x590d;&#x5236;&#x4e00;&#x4e2a;&#x8fdb;&#x7a0b;&#xff0c;&#x4e0d;&#x4ec5;&#x4ec5;&#x662f;&#x8981;&#x590d;&#x5236; <code>task_struct</code> &#x8fd9;&#x4e2a;&#x7ed3;&#x6784;&#x4f53;&#xff0c;&#x8fd8;&#x9700;&#x8981;&#x6839;&#x636e;&#x7ed3;&#x6784;&#x4f53;&#x5185;&#x5404;&#x4e2a;&#x5c5e;&#x6027;&#x7684;&#x8bed;&#x4e49;&#x4ee5;&#x53ca;&#x8c03;&#x7528;&#x53c2;&#x6570;&#x53bb;&#x5bf9;&#x8fd9;&#x4e9b;&#x5c5e;&#x6027;&#x8fdb;&#x884c;&#x8c03;&#x6574;&#xff0c;&#x4f8b;&#x5982;&#x8bbe;&#x7f6e;&#x65b0;&#x7684;&#x5185;&#x5b58;&#x6620;&#x5c04;&#x7b49;&#x3002;&#x8fd9;&#x4e9b;&#x5de5;&#x4f5c;&#x90fd;&#x662f;&#x5728; <code>copy_process</code> &#x51fd;&#x6570;&#x4e2d;&#x5b8c;&#x6210;&#x7684;&#xff1a;</p>
+<pre><code class="language-c">[kernel_clone() &gt; copy_process()]
+// /kernel/fork.c
+// &#x4e0b;&#x65b9;&#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;&#xff0c;&#x7701;&#x7565;&#x4e86;&#x7ed3;&#x6784;&#x4e0e;&#x914d;&#x7f6e;&#x76f8;&#x5173;&#x7684;&#x5b9a;&#x4e49;
+static __latent_entropy struct task_struct *copy_process(
+                    struct pid *pid,
+                    int trace,
+                    int node,
+                    struct kernel_clone_args *args)
+{
+    struct task_struct *p;
+    u64 clone_flags = args-&gt;flags;
+
+    // &#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x4f1a;&#x590d;&#x5236; task_struct &#x7ed3;&#x6784;&#x4f53;&#xff0c;&#x5177;&#x4f53;&#x7684;&#x8fc7;&#x7a0b;&#x6d89;&#x53ca;&#x5230; NUMA &#x76f8;
+    // &#x5173;&#x7684;&#x6280;&#x672f;&#xff0c;&#x800c; NUMA &#x4e0e;&#x591a; CPU &#x6709;&#x5173;&#x3002;&#x4e3e;&#x4f8b;&#x6765;&#x8bf4;&#xff0c;&#x5728;&#x591a;&#x6838;&#x5fc3; CPU &#x4e0a;&#xff0c;
+    // &#x6bcf;&#x4e2a;&#x6838;&#x5fc3;&#x90fd;&#x6709;&#x81ea;&#x5df1;&#x7684;&#x7f13;&#x5b58;&#xff0c;&#x8de8;&#x6838;&#x5fc3;&#x7684;&#x7f13;&#x5b58;&#x8bbf;&#x95ee;&#x4f1a;&#x6bd4;&#x8bbf;&#x95ee;&#x540c;&#x6838;&#x5fc3;&#x7f13;&#x5b58;&#x66f4;&#x6162;&#xff0c;
+    // &#x56e0;&#x6b64; Linux &#x9700;&#x8981;&#x6839;&#x636e;&#x60c5;&#x51b5;&#x5206;&#x914d;&#x7f13;&#x5b58;&#x3002;&#x8fd9;&#x79cd;&#x60c5;&#x51b5;&#x4e0b;&#xff0c;&#x8fd9;&#x91cc;&#x7684; node &#x53ef;&#x4ee5;
+    // &#x7406;&#x89e3;&#x4e3a;&#x6838;&#x5fc3;&#x7684; ID&#x3002;
+    p = dup_task_struct(current, node);
+
+    // LSM &#x94a9;&#x51fd;&#x6570;&#xff0c;&#x53ef;&#x53c2;&#x8003;&#x300a;Linux &#x5185;&#x6838;&#x5b89;&#x5168;&#x6a21;&#x5757;&#x6df1;&#x5165;&#x5256;&#x6790;&#x300b;&#x4e00;&#x4e66;
+    retval = security_task_alloc(p, clone_flags);
+    // if (retval) {} &#x662f;&#x5728;&#x505a;&#x9519;&#x8bef;&#x5904;&#x7406;&#xff0c;&#x6bcf;&#x4e2a;&#x4e2d;&#x95f4;&#x51fd;&#x6570;&#x5728;&#x6b63;&#x5e38;&#x8fd4;&#x56de;&#x65f6;&#xff0c;&#x8fd4;&#x56de;
+    // &#x503c;&#x90fd;&#x662f; 0&#xff1b;&#x5982;&#x679c;&#x8fd4;&#x56de;&#x503c;&#x4e3a;&#x975e; 0&#xff0c;&#x5219;&#x9700;&#x8981;&#x64a4;&#x9500;&#x6b64;&#x524d;&#x7684;&#x6240;&#x6709;&#x64cd;&#x4f5c;&#x3002;&#x4e3a;&#x4e86;&#x65b9;&#x4fbf;&#x9605;
+    // &#x8bfb;&#xff0c;&#x53ea;&#x6458;&#x5f55;&#x4e86;&#x7b2c;&#x4e00;&#x4e2a;&#x8fd9;&#x6837;&#x7684;&#x9519;&#x8bef;&#x5904;&#x7406;&#x8bed;&#x53e5;&#x3002;
+    if (retval)
+        goto bad_fork_cleanup_audit;
+    retval = copy_semundo(clone_flags, p);
+    retval = copy_files(clone_flags, p);
+    retval = copy_fs(clone_flags, p);
+    retval = copy_sighand(clone_flags, p);
+    retval = copy_signal(clone_flags, p);
+    retval = copy_mm(clone_flags, p);
+    retval = copy_namespaces(clone_flags, p);
+    retval = copy_io(clone_flags, p);
+    retval = copy_thread(clone_flags, args-&gt;stack, args-&gt;stack_size, p, args-&gt;tls);
+
+    // &#x5982;&#x679c; pid != &amp;init_struct_pid&#xff0c;&#x8bf4;&#x660e;&#x6211;&#x4eec;&#x4e0d;&#x662f;&#x5728;&#x521b;&#x5efa;&#x5185;&#x6838;&#x7ebf;&#x7a0b;&#xff1b;&#x9700;
+    // &#x8981;&#x5206;&#x914d;&#x4e00;&#x4e2a;&#x65b0;&#x7684; pid&#x3002;
+    if (pid != &amp;init_struct_pid) {
+        pid = alloc_pid(p-&gt;nsproxy-&gt;pid_ns_for_children, args-&gt;set_tid,
+                args-&gt;set_tid_size);
+    }
+}
+</code></pre>
+<p><span style="color: #999"><em><code>__latent_entropy</code> &#x4e0e;&#x5bc6;&#x7801;&#x5b66;&#x6709;&#x5173;&#xff0c;&#x53ef;&#x53c2;&#x8003; <a href="https://hackaday.com/2017/11/02/what-is-entropy-and-how-do-i-get-more-of-it/">Reference 3</a>&#x3002;</em></span></p>
+<p>&#x5728;&#x8fd9;&#x4e9b;&#x5904;&#x7406;&#x4e2d;&#xff0c;&#x6700;&#x91cd;&#x8981;&#x7684;&#x662f; <code>copy_mm</code>&#xff0c;&#x5373;&#x5bf9;&#x8fdb;&#x7a0b;<strong>&#x865a;&#x62df;&#x5185;&#x5b58;&#x7684;&#x590d;&#x5236;</strong>&#x3002;&#x5b9e;&#x9645;&#x4e0a;&#xff0c;&#x5728;&#x6574;&#x4e2a;&#x8fdb;&#x7a0b;&#x521b;&#x5efa;&#x7684;&#x8fc7;&#x7a0b;&#x4e2d;&#xff0c;&#x6700;&#x590d;&#x6742;&#x7684;&#x5c31;&#x662f;&#x8fd9;&#x4e2a;&#x90e8;&#x5206;&#xff0c;&#x4ee5;&#x81f3;&#x4e8e; Linus Torvalds &#x672c;&#x4eba;&#x5728; <code>fork.c</code> &#x6587;&#x4ef6;&#x7684;&#x5f00;&#x5934;&#x5199;&#x9053;&#xff1a;</p>
+<blockquote>
+<p>Fork is rather simple, once you get the hang of it, but the memory management can be a b***h.&#xff08;&#x53ea;&#x8981;&#x4f60;&#x4e86;&#x89e3;&#x4e86;&#x5927;&#x6982;&#xff0c;fork &#x672c;&#x8eab;&#x5f88;&#x7b80;&#x5355;&#xff1b;&#x5185;&#x5b58;&#x7ba1;&#x7406;&#x624d;&#x662f;&#x771f;&#x6b63;&#x70e6;&#x4eba;&#x7684;&#x3002;&#xff09; </p>
+</blockquote>
+<pre><code class="language-c">[kernel_clone() &gt; copy_process() &gt; copy_mm()]
+// /kernel/fork.c
+// &#x4e0b;&#x65b9;&#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;&#xff0c;&#x7701;&#x7565;&#x4e86;&#x4e00;&#x4e9b;&#x5185;&#x5bb9;
+static int copy_mm(unsigned long clone_flags, struct task_struct *tsk)
+{
+    struct mm_struct *mm, *oldmm;
+    // &#x5982;&#x679c;&#x7236;&#x8fdb;&#x7a0b;&#x662f;&#x4e00;&#x4e2a;&#x5185;&#x6838;&#x7ebf;&#x7a0b;&#xff0c;&#x5219;&#x5b83;&#x662f;&#x6ca1;&#x6709;&#x7528;&#x6237;&#x7a7a;&#x95f4;&#x5185;&#x5b58;&#x7684;&#xff0c;&#x56e0;&#x6b64;&#x76f4;&#x63a5;&#x8fd4;&#x56de;
+    oldmm = current-&gt;mm;
+    if (!oldmm)
+        return 0;
+    // &#x5982;&#x679c;&#x8bbe;&#x7f6e;&#x4e86; CLONE_VM &#x8fd9;&#x4e00; flag&#xff0c;&#x5219;&#x65b0;&#x8fdb;&#x7a0b;&#x4e0e;&#x5176;&#x7236;&#x8fdb;&#x7a0b;&#x5171;&#x4eab;&#x865a;&#x62df;&#x5185;&#x5b58;&#xff0c;
+    // &#x5373;&#x76f8;&#x5f53;&#x4e8e;&#x521b;&#x5efa;&#x7684;&#x662f;&#x4e00;&#x4e2a;&#x7ebf;&#x7a0b;&#x3002;&#x53ea;&#x9700;&#x8981;&#x590d;&#x5236; mm &#x6307;&#x9488;&#x5373;&#x53ef;&#x3002;
+    if (clone_flags &amp; CLONE_VM) {
+        // &#x8c03;&#x7528; mmget &#x6765;&#x589e;&#x52a0; oldmm &#x7684;&#x5f15;&#x7528;&#x8ba1;&#x6570;
+        mmget(oldmm);
+        mm = oldmm;
+    } else {
+        mm = dup_mm(tsk, current-&gt;mm);
+        if (!mm)
+            return -ENOMEM;
+    }
+
+    tsk-&gt;mm = mm;
+    tsk-&gt;active_mm = mm;
+    return 0;
+}
+</code></pre>
+<p>&#x4e0a;&#x9762;&#x4ee3;&#x7801;&#x4e2d;&#xff0c;&#x6700;&#x5173;&#x952e;&#x7684;&#x662f; <code>dup_mm</code>&#xff1a;</p>
+<pre><code class="language-c">[kernel_clone() &gt; copy_process() &gt; copy_mm() &gt; dup_mm()]
+// /kernel/fork.c
+// &#x4e0b;&#x65b9;&#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;&#xff0c;&#x7701;&#x7565;&#x4e86;&#x4e00;&#x4e9b;&#x5185;&#x5bb9;
+static struct mm_struct *dup_mm(struct task_struct *tsk,
+                struct mm_struct *oldmm)
+{
+    struct mm_struct *mm;
+    int err;
+
+    mm = allocate_mm();
+    if (!mm)
+        goto fail_nomem;
+
+    memcpy(mm, oldmm, sizeof(*mm));
+
+    if (!mm_init(mm, tsk, mm-&gt;user_ns))
+        goto fail_nomem;
+
+    err = dup_mmap(mm, oldmm);
+    if (err)
+        goto free_pt;
+
+    return mm;
+}
+</code></pre>
+<p>&#x4e0a;&#x9762;&#x7684;&#x8fd9;&#x6bb5;&#x4ee3;&#x7801;&#x5927;&#x90e8;&#x5206;&#x90fd;&#x4e0d;&#x96be;&#x7406;&#x89e3;&#xff0c;&#x53ef;&#x4ee5;&#x53d1;&#x73b0;&#x6700;&#x91cd;&#x8981;&#x7684;&#x662f; <code>dup_mmap</code> &#x51fd;&#x6570;&#xff1a;</p>
+<pre><code class="language-c">[kernel_clone() &gt; copy_process() &gt; copy_mm() &gt; dup_mm() &gt; dup_mmap()]
+// /kernel/fork.c
+// &#x4e0b;&#x65b9;&#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;&#xff0c;&#x7701;&#x7565;&#x4e86;&#x4e00;&#x4e9b;&#x5185;&#x5bb9;
+static __latent_entropy int dup_mmap(struct mm_struct *mm,
+                    struct mm_struct *oldmm)
+{
+    struct vm_area_struct *mpnt, *tmp, *prev, **pprev;
+    mm-&gt;total_vm = oldmm-&gt;total_vm;
+    mm-&gt;data_vm = oldmm-&gt;data_vm;
+    mm-&gt;exec_vm = oldmm-&gt;exec_vm;
+    mm-&gt;stack_vm = oldmm-&gt;stack_vm;
+    for (mpnt = oldmm-&gt;mmap; mpnt; mpnt = mpnt-&gt;vm_next) {
+        tmp = vm_area_dup(mpnt);
+        mm-&gt;map_count++;
+        if (!(tmp-&gt;vm_flags &amp; VM_WIPEONFORK))
+            retval = copy_page_range(tmp, mpnt);
+    }
+}
+</code></pre>
+<p>&#x5f53;&#x4e2d;&#x6700;&#x91cd;&#x8981;&#x7684;&#x81ea;&#x7136;&#x662f; <code>copy_page_range</code> &#x51fd;&#x6570;&#xff0c;&#x5373;&#x5bf9;&#x865a;&#x5b58;&#x9875;&#x9762;&#x7684;&#x590d;&#x5236;&#x3002;&#x4ece;&#x8fd9;&#x91cc;&#x5f00;&#x59cb;&#xff0c;&#x4e8b;&#x60c5;&#x5c31;&#x53d8;&#x5f97;&#x590d;&#x6742;&#x8d77;&#x6765;&#x3002;&#x7b80;&#x5355;&#x5730;&#x8bf4;&#xff1a;</p>
+<p><em>P4D&#x3001;PUD &#x7b49;&#x4e3a;&#x81ea; Linux 4.11-rc2 &#x8fdb;&#x5165;&#x4e3b;&#x7ebf;&#x4ee3;&#x7801;&#x7684;&#x4e94;&#x7ea7;&#x9875;&#x8868;&#x673a;&#x5236;&#x7684;&#x4e00;&#x90e8;&#x5206;&#xff0c;&#x5927;&#x81f4;&#x539f;&#x7406;&#x4e0e;&#x539f;&#x4e66;&#x4e2d;&#x7684;&#x4e09;&#x7ea7;&#x9875;&#x8868;&#x673a;&#x5236;&#x7c7b;&#x4f3c;&#xff0c;&#x5177;&#x4f53;&#x53ef;&#x89c1; <a href="https://lwn.net/Articles/717293/">Reference 4</a>&#x3002;</em></p>
+<ul>
+<li><code>copy_page_range</code> &#x4f1a;&#x904d;&#x5386;&#x6240;&#x6709; P4G &#x5e76;&#x8c03;&#x7528; <code>copy_p4d_range</code></li>
+<li><code>copy_p4d_range</code> &#x4f1a;&#x904d;&#x5386;&#x6240;&#x6709; PUG &#x5e76;&#x8c03;&#x7528; <code>copy_pud_range</code></li>
+<li><code>copy_pud_range</code> &#x4f1a;&#x904d;&#x5386;&#x6240;&#x6709; PMG &#x5e76;&#x8c03;&#x7528; <code>copy_pmd_range</code></li>
+<li><code>copy_pmd_range</code> &#x4f1a;&#x904d;&#x5386;&#x6240;&#x6709; PTE &#x5e76;&#x8c03;&#x7528; <code>copy_pte_range</code></li>
+<li><code>copy_pte_range</code> &#x4f1a;&#x8c03;&#x7528; <code>copy_present_pte</code> &#x590d;&#x5236;&#x5355;&#x4e2a; PTE&#xff1a;</li>
+</ul>
+<pre><code class="language-c">[ ... &gt; 
+    dup_mmap() &gt; copy_page_range() &gt;
+    copy_p4d_range() &gt; copy_pud_range() &gt;
+    copy_pmd_range() &gt; copy_pte_range() &gt;
+    copy_present_pte()]
+// /mm/memory.c
+// &#x4e0b;&#x65b9;&#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;&#xff0c;&#x7701;&#x7565;&#x4e86;&#x4e00;&#x4e9b;&#x5185;&#x5bb9;
+static inline int
+copy_present_pte(struct vm_area_struct *dst_vma, struct vm_area_struct *src_vma,
+         pte_t *dst_pte, pte_t *src_pte, unsigned long addr, int *rss,
+         struct page **prealloc)
+{
+    if (is_cow_mapping(vm_flags) &amp;&amp; pte_write(pte)) {
+        ptep_set_wrprotect(src_mm, addr, src_pte);
+        pte = pte_wrprotect(pte);
+    }
+}
+</code></pre>
+<p>&#x8fd9;&#x91cc;&#x662f;&#x6700;&#x5173;&#x952e;&#x7684;&#x90e8;&#x5206;&#x3002;Linux &#x4e4b;&#x6240;&#x4ee5;&#x80fd;&#x975e;&#x5e38;&#x8fc5;&#x901f;&#x5730;&#x521b;&#x5efa;&#x65b0;&#x8fdb;&#x7a0b;&#xff0c;&#x5f97;&#x76ca;&#x4e8e;&#x5176; copy-on-write&#xff08;&#x5199;&#x65f6;&#x590d;&#x5236;&#xff0c;COW&#xff09;&#x673a;&#x5236;&#x3002;&#x521b;&#x5efa;&#x65b0;&#x8fdb;&#x7a0b;&#x65f6;&#xff0c;&#x7236;&#x5b50;&#x8fdb;&#x7a0b;&#x5148;&#x5171;&#x4eab;&#x5185;&#x5b58;&#x9875;&#x9762;&#xff0c;&#x76f4;&#x5230;&#x7236;&#x5b50;&#x8fdb;&#x7a0b;&#x5176;&#x4e2d;&#x4e4b;&#x4e00;&#x5b9e;&#x9645;&#x4e0a;&#x771f;&#x7684;&#x8981;&#x5bf9;&#x9875;&#x9762;&#x8fdb;&#x884c;&#x5199;&#x64cd;&#x4f5c;&#x65f6;&#xff0c;&#x518d;&#x53bb;&#x590d;&#x5236;&#x8be5;&#x9875;&#x9762;&#x3002;&#x5982;&#x679c; flags &#x4e2d;&#x7684;&#x8bbe;&#x5b9a;&#x6ca1;&#x6709;&#x7981;&#x6b62; COW &#x673a;&#x5236;&#xff0c;&#x5219;&#x4e0d;&#x590d;&#x5236;&#x8be5;&#x9875;&#x9762;&#xff0c;&#x800c;&#x662f;&#x5c06;&#x539f;&#x9875;&#x9762;&#x8bbe;&#x5b9a;&#x4e3a;&#x201c;&#x5199;&#x4fdd;&#x62a4;&#x201d;&#xff0c;&#x5e76;&#x76f4;&#x63a5;&#x5efa;&#x7acb;&#x65b0;&#x8fdb;&#x7a0b;&#x4e0e;&#x8be5;&#x9875;&#x9762;&#x7684;&#x6620;&#x5c04;&#x3002;&#x8fd9;&#x6837;&#x505a;&#x907f;&#x514d;&#x4e86;&#x5927;&#x91cf;&#x4e0d;&#x5fc5;&#x8981;&#x7684;&#x5185;&#x5b58;&#x590d;&#x5236;&#xff0c;&#x52a0;&#x901f;&#x4e86;&#x8fdb;&#x7a0b;&#x521b;&#x5efa;&#x5e76;&#x8282;&#x7701;&#x4e86;&#x5185;&#x5b58;&#x7a7a;&#x95f4;&#x3002;</p>
+<p><code>is_cow_mapping</code> &#x7684;&#x5b9a;&#x4e49;&#x5f88;&#x6e05;&#x695a;&#x5730;&#x8bf4;&#x660e;&#x4e86;&#x54ea;&#x4e9b;&#x9875;&#x9762;&#x53ef;&#x4ee5;&#x542f;&#x7528; COW &#x673a;&#x5236;&#xff1a;</p>
+<pre><code class="language-c">// /include/linux/mm.h
+static inline bool is_cow_mapping(vm_flags_t flags)
+{
+    // &#x53ea;&#x6709;&#x975e;&#x5171;&#x4eab;&#x4e14;&#x53ef;&#x5199;&#x7684;&#x9875;&#x9762;&#x53ef;&#x4ee5;&#x542f;&#x7528; COW
+    return (flags &amp; (VM_SHARED | VM_MAYWRITE)) == VM_MAYWRITE;
+}
+</code></pre>
+<p>&#x5171;&#x4eab;&#x7684;&#x9875;&#x9762;&#x4e0d;&#x80fd;&#x6253;&#x5f00; COW &#x673a;&#x5236;&#xff0c;&#x56e0;&#x4e3a;&#x6253;&#x5f00; COW &#x673a;&#x5236;&#x540e;&#x9875;&#x9762;&#x53d8;&#x4e3a;&#x5199;&#x4fdd;&#x62a4;&#x72b6;&#x6001;&#xff0c;&#x4e4b;&#x540e;&#x5bf9;&#x5171;&#x4eab;&#x5185;&#x5b58;&#x7684;&#x5199;&#x5165;&#x4f1a;&#x89e6;&#x53d1;&#x5f02;&#x5e38;&#x5904;&#x7406;&#x3002;&#x53ea;&#x8bfb;&#x7684;&#x9875;&#x9762;&#x4f3c;&#x4e4e;&#x4e5f;&#x80fd;&#x6253;&#x5f00; COW &#x673a;&#x5236;&#xff0c;&#x4f46;&#x5176;&#x5b9e;&#x53ea;&#x8bfb;&#x7684;&#x9875;&#x9762;&#x672c;&#x8eab;&#x5c31;&#x662f;&#x5199;&#x4fdd;&#x62a4;&#x7684;&#xff0c;&#x56e0;&#x6b64;&#x6ca1;&#x6709;&#x5fc5;&#x8981;&#x5728;&#x540e;&#x9762;&#x8fdb;&#x884c;&#x65b0;&#x7684;&#x5c5e;&#x6027;&#x8bbe;&#x7f6e;&#xff0c;&#x4ece;&#x800c;&#x7a0d;&#x5fae;&#x52a0;&#x901f;&#x8fd9;&#x4e2a;&#x8fc7;&#x7a0b;&#x3002;</p>
+<p>&#x5f53;&#x7236;&#x5b50;&#x8fdb;&#x7a0b;&#x5176;&#x4e2d;&#x4e4b;&#x4e00;&#x5c1d;&#x8bd5;&#x5411;&#x5f00;&#x542f;&#x4e86; COW &#x7684;&#x9875;&#x9762;&#x4e0a;&#x5199;&#x5165;&#x6570;&#x636e;&#x65f6;&#xff0c;&#x7531;&#x4e8e;&#x5f00;&#x542f;&#x4e86;&#x5199;&#x4fdd;&#x62a4;&#xff0c;&#x4f1a;&#x89e6;&#x53d1;&#x7cfb;&#x7edf;&#x7684;&#x5f02;&#x5e38;&#x5904;&#x7406;&#xff0c;&#x8fdb;&#x5165; <code>handle_pte_fault</code> &#x51fd;&#x6570;&#xff0c;&#x8be5;&#x51fd;&#x6570;&#x4f1a;&#x8c03;&#x7528; <code>do_wp_page</code> &#xff0c;&#x8fdb;&#x800c;&#x8c03;&#x7528; <code>wp_page_copy() &gt; cow_user_page() &gt; copy_user_highpage()</code> &#x6765;&#x62f7;&#x8d1d;&#x9875;&#x9762;&#xff1a;</p>
+<pre><code class="language-jsx">[... &gt; handle_pte_fault() &gt; do_wp_page() &gt; wp_page_copy() &gt;
+    cow_user_page() &gt; copy_user_highpage()]
+// /include/linux/highmem.h
+// &#x6709;&#x4e00;&#x4e9b;&#x7279;&#x6b8a;&#x7684; CPU &#x67b6;&#x6784;&#x4f1a;&#x6709;&#x81ea;&#x5df1;&#x7684;&#x5b9e;&#x73b0;&#x65b9;&#x6848;&#xff0c;&#x8fd9;&#x91cc;&#x5c55;&#x793a;&#x7684;&#x662f;&#x9ed8;&#x8ba4;&#x7684; fallback &#x65b9;&#x6848;
+static inline void copy_user_highpage(struct page *to, struct page *from,
+    unsigned long vaddr, struct vm_area_struct *vma)
+{
+    char *vfrom, *vto;
+
+    vfrom = kmap_atomic(from); // &#x6682;&#x65f6;&#x5173;&#x95ed;&#x8c03;&#x5ea6;&#x5e76;&#x5173;&#x95ed;&#x9875;&#x9762;&#x5f02;&#x5e38;&#xff0c;&#x5efa;&#x7acb;&#x9875;&#x9762;&#x6620;&#x5c04;
+    vto = kmap_atomic(to);
+    copy_user_page(vto, vfrom, vaddr, to); // memcpy((vto), (vfrom), PAGE_SIZE)
+    kunmap_atomic(vto);
+    kunmap_atomic(vfrom);
+}
+</code></pre>
+<p>&#x4e0a;&#x9762;&#x4ecb;&#x7ecd;&#x7684;&#x53ea;&#x662f;&#x6700;&#x57fa;&#x672c;&#x7684;&#x6846;&#x67b6;&#xff0c;&#x8fd8;&#x6709;&#x5f88;&#x591a;&#x8fb9;&#x754c;&#x6761;&#x4ef6;&#x5904;&#x7406;&#x7684;&#x60c5;&#x51b5;&#x6ca1;&#x6709;&#x8bf4;&#x660e;&#xff0c;&#x4f8b;&#x5982;&#x9875;&#x9762;&#x5b9e;&#x9645;&#x4e0a;&#x53ef;&#x80fd;&#x662f;&#x7531;&#x6587;&#x4ef6;&#x901a;&#x8fc7; mmap &#x7cfb;&#x7edf;&#x8c03;&#x7528;&#x5f97;&#x6765;&#x7684;&#xff0c;&#x6b64;&#x65f6;&#x5185;&#x5b58;&#x7ba1;&#x7406;&#x53c8;&#x662f;&#x53e6;&#x4e00;&#x5957;&#x65b9;&#x6848;&#xff0c;&#x53ef;&#x81ea;&#x884c;&#x67e5;&#x9605;&#x6e90;&#x7801;&#x3002;</p>
+<h2>&#x8fdb;&#x7a0b;&#x8c03;&#x5ea6;</h2>
+<p>Linux &#x7684;&#x8c03;&#x5ea6;&#x5168;&#x90e8;&#x53d1;&#x751f;&#x5728; <code>__schedule()</code> &#x51fd;&#x6570;&#x88ab;&#x8c03;&#x7528;&#x65f6;&#xff0c;&#x5176;&#x5b9e;&#x73b0;&#x4f4d;&#x4e8e; <code>/kernel/sched/core.c</code> &#x4e2d;&#x3002;&#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x5728;&#x7cfb;&#x7edf;&#x5185;&#x7684;&#x8c03;&#x7528;&#x6709;&#x4e09;&#x79cd;&#x60c5;&#x5f62;&#xff1a;</p>
+<ol>
+<li>&#x4f7f;&#x7528;&#x5176;&#x4ed6;&#x673a;&#x5236;&#x663e;&#x5f0f;&#x5730;&#x5bfc;&#x81f4;&#x5f53;&#x524d;&#x8fdb;&#x7a0b;&#x963b;&#x585e;&#xff0c;&#x4f8b;&#x5982;&#x8bbf;&#x95ee;&#x4e92;&#x65a5;&#x9501;&#x3001;&#x4fe1;&#x53f7;&#x91cf;&#x7b49;&#x5bfc;&#x81f4;&#x5f53;&#x524d;&#x8fdb;&#x7a0b;&#x963b;&#x585e;&#x65f6;&#xff1b;</li>
+<li>&#x4e2d;&#x65ad;&#x5b8c;&#x6210;&#xff0c;&#x5c06;&#x4ece;&#x5185;&#x6838;&#x6001;&#x56de;&#x5230;&#x7528;&#x6237;&#x6001;&#xff0c;&#x5e76;&#x4e14;&#x8bbe;&#x7f6e;&#x4e86; <code>TIF_NEED_RESCHED</code> &#x8fd9;&#x4e00;&#x6807;&#x5fd7;&#x65f6; (<a href="https://stackoverflow.com/a/59105973">Reference 6</a>)&#xff1b;</li>
+<li>&#x8fdb;&#x7a0b;&#x88ab;&#x5524;&#x9192;&#x4e4b;&#x540e;&#x67d0;&#x4e2a;&#x7b26;&#x5408;&#x6761;&#x4ef6;&#x7684;&#x6700;&#x8fd1;&#x65f6;&#x523b;&#x3002;<code>wake_up()</code> &#x5e76;&#x4e0d;&#x4f1a;&#x7acb;&#x9a6c;&#x5bfc;&#x81f4; <code>__schedule()</code> &#x88ab;&#x8c03;&#x7528;&#xff0c;&#x53ea;&#x662f;&#x6682;&#x65f6;&#x5c06;&#x9700;&#x8981;&#x5524;&#x9192;&#x7684;&#x8fdb;&#x7a0b;&#x52a0;&#x5165;&#x5230;&#x8c03;&#x5ea6;&#x961f;&#x5217;&#x4e2d;&#x53bb;&#x3002;&#x5bf9;&#x4e8e;&#x652f;&#x6301;&#x62a2;&#x5360;&#x5f0f;&#x8c03;&#x7528;&#xff08;<code>CONFIG_PREEMPTIVE=y</code>&#xff09;&#x7684;&#x5185;&#x6838;&#x6765;&#x8bf4;&#xff0c;&#x8fd9;&#x4e2a;&#x201c;&#x6700;&#x8fd1;&#x65f6;&#x523b;&#x201d;&#x6307;&#x7684;&#x662f;&#x4ee5;&#x4e0b;&#x4e8b;&#x4ef6;&#x4e2d;&#x6700;&#x5148;&#x53d1;&#x751f;&#x7684;&#x90a3;&#x4e2a;&#xff1a;<ol>
+<li>&#x7cfb;&#x7edf;&#x8c03;&#x7528;&#x6216;&#x5f02;&#x5e38;&#x5904;&#x7406;&#x7684;&#x4e0a;&#x4e0b;&#x6587;&#x5bf9; <code>preempt_enable()</code> &#x7684;&#x8c03;&#x7528;&#xff1b;</li>
+<li>&#x4e2d;&#x65ad;&#x5904;&#x7406;&#x7ed3;&#x675f;&#x540e;&#x56de;&#x5230;&#x53ef;&#x62a2;&#x5360;&#x7684;&#x4e0a;&#x4e0b;&#x6587;&#x3002;</li>
+</ol>
+</li>
+</ol>
+<p><code>__schedule()</code> &#x63a5;&#x7740;&#x4f1a;&#x8c03;&#x7528; <code>pick_next_task() &gt; __pick_next_task()</code> &#x6765;&#x9009;&#x62e9;&#x4e0b;&#x4e00;&#x4e2a;&#x5e94;&#x5f53;&#x88ab;&#x8c03;&#x5ea6;&#x7684;&#x8fdb;&#x7a0b;&#x3002;</p>
+<h3>CFS &#x8c03;&#x5ea6;&#x5668;</h3>
+<p>&#x4e3a;&#x4e86;&#x9002;&#x7528;&#x4e8e;&#x4e0d;&#x540c;&#x5e94;&#x7528;&#x573a;&#x666f;&#xff0c;&#x6211;&#x4eec;&#x9700;&#x8981;&#x4e0d;&#x540c;&#x7684;&#x8fdb;&#x7a0b;&#x8c03;&#x5ea6;&#x7b56;&#x7565;&#x3002;&#x4f8b;&#x5982;&#xff0c;&#x5728;&#x4e00;&#x822c;&#x7684;&#x5e94;&#x7528;&#x573a;&#x666f;&#x4e0b;&#xff0c;&#x6211;&#x4eec;&#x5e0c;&#x671b;&#x5c3d;&#x53ef;&#x80fd;&#x516c;&#x5e73;&#x5730;&#x5728;&#x5404;&#x4e2a;&#x8fdb;&#x7a0b;&#x4e4b;&#x95f4;&#x5206;&#x914d; CPU &#x65f6;&#x95f4;&#xff0c;&#x5e76;&#x4e14;&#x5141;&#x8bb8;&#x4efb;&#x52a1;&#x5728;&#x4e00;&#x5b9a;&#x8303;&#x56f4;&#x5185;&#x5ef6;&#x8fdf;&#x4f5c;&#x51fa;&#x54cd;&#x5e94;&#xff1b;&#x800c;&#x5bf9;&#x4e8e;&#x4e00;&#x4e9b;&#x5b9e;&#x65f6;&#x4efb;&#x52a1;&#xff0c;&#x5b83;&#x4eec;&#x8981;&#x6c42;&#x80fd;&#x7acb;&#x5373;&#x54cd;&#x5e94;&#xff0c;&#x4f8b;&#x5982;&#x706b;&#x7bad;&#x53d1;&#x5c04;&#x8fc7;&#x7a0b;&#x4e2d;&#x5bf9;&#x4e8e;&#x5f02;&#x5e38;&#x4f20;&#x611f;&#x5668;&#x53c2;&#x6570;&#x7684;&#x5904;&#x7406;&#x5c31;&#x5fc5;&#x987b;&#x662f;&#x7acb;&#x523b;&#x54cd;&#x5e94;&#xff0c;&#x7a0d;&#x5fae;&#x8fdf;&#x7f13;&#x4e00;&#x4e9b;&#x7684;&#x54cd;&#x5e94;&#x90fd;&#x53ef;&#x80fd;&#x5bfc;&#x81f4;&#x81f4;&#x547d;&#x7684;&#x540e;&#x679c;&#x3002;&#x4e3a;&#x4e86;&#x652f;&#x6301;&#x8fd9;&#x79cd;&#x9700;&#x6c42;&#xff0c;Linux &#x63d0;&#x4f9b;&#x4e86;&#x591a;&#x79cd;&#x8c03;&#x5ea6;&#x7b56;&#x7565;&#xff0c;&#x5305;&#x62ec;&#x9002;&#x7528;&#x4e8e;&#x524d;&#x6587;&#x63d0;&#x5230;&#x7684;&#x5b9e;&#x65f6;&#x4efb;&#x52a1;&#x7684; <code>SCHED_RR</code> &#x4ee5;&#x53ca;&#x666e;&#x901a;&#x60c5;&#x51b5;&#x4e0b;&#x7684; <code>SCHED_NORMAL</code>&#x3002;&#x9488;&#x5bf9;&#x4e0d;&#x540c;&#x7684;&#x8c03;&#x5ea6;&#x7b56;&#x7565;&#xff0c;&#x8c03;&#x5ea6;&#x5668;&#x53c8;&#x53ef;&#x4ee5;&#x88ab;&#x5206;&#x4e3a;&#x591a;&#x79cd;&#x7c7b;&#x522b;&#xff0c;&#x5176;&#x4e2d;&#x4e00;&#x79cd;&#x7c7b;&#x578b;&#x662f; CFS &#x8c03;&#x5ea6;&#x5668; (completely fair scheduler)&#xff0c;&#x5b83;&#x662f; Linux &#x8fdb;&#x7a0b;&#x7684;&#x9ed8;&#x8ba4;&#x8c03;&#x5ea6;&#x5668;&#xff0c;&#x5b9e;&#x73b0;&#x5728; <code>/kernel/sched/fair.c</code> &#x4e2d;&#x3002;</p>
+<p>&#x4e3a;&#x4e86;&#x4ecb;&#x7ecd; CFS &#x8c03;&#x5ea6;&#x5668;&#xff0c;&#x6709;&#x5fc5;&#x8981;&#x9996;&#x5148;&#x4ecb;&#x7ecd;&#x5176;&#x4e2d;&#x6d89;&#x53ca;&#x5230;&#x7684;&#x5404;&#x7c7b;&#x6982;&#x5ff5;&#x3002;</p>
+<p>&#x7cfb;&#x7edf;&#x7ef4;&#x62a4;&#x4e86;&#x4e00;&#x7ec4;&#x961f;&#x5217;&#xff0c;&#x79f0;&#x4e3a; <em><strong>&#x8fd0;&#x884c;&#x961f;&#x5217;</strong></em>&#xff0c;&#x8fd0;&#x884c;&#x961f;&#x5217;&#x4e2d;&#x7ef4;&#x62a4;&#x7684;&#x5bf9;&#x8c61;&#x79f0;&#x4e3a; <em><strong>&#x8c03;&#x5ea6;&#x5b9e;&#x4f53;</strong></em>&#x3002;&#x8c03;&#x5ea6;&#x5b9e;&#x4f53;&#x53ef;&#x4ee5;&#x662f;&#x4e00;&#x4e2a;<strong>&#x8fdb;&#x7a0b;</strong>&#xff08;&#x4e3a;&#x4e86;&#x65b9;&#x4fbf;&#x4ecb;&#x7ecd;&#xff0c;&#x540e;&#x9762;&#x79f0;&#x4e3a; PSE&#xff09;&#xff0c;&#x4e5f;&#x53ef;&#x4ee5;&#x662f;&#x4e00;&#x4e2a;<strong>&#x8fdb;&#x7a0b;&#x7ec4;</strong> &#xff08;&#x540e;&#x9762;&#x79f0;&#x4e3a; GSE&#xff09;&#x3002;&#x6bcf;&#x4e2a; GSE &#x8fd8;&#x6709;&#x81ea;&#x5df1;&#x7684;&#x8fd0;&#x884c;&#x961f;&#x5217;&#x3002;</p>
+<blockquote>
+<p>&#x6b63;&#x662f;&#x56e0;&#x4e3a;&#x9700;&#x8981;&#x652f;&#x6301;&#x6309;&#x7ec4;&#x8c03;&#x5ea6;&#xff0c;Linux &#x624d;&#x6ca1;&#x6709;&#x76f4;&#x63a5;&#x5728;&#x961f;&#x5217;&#x4e2d;&#x7ef4;&#x62a4;&#x8fdb;&#x7a0b;&#xff0c;&#x800c;&#x662f;&#x5b9e;&#x73b0;&#x4e86;&#x4e00;&#x4e2a;&#x62bd;&#x8c61;&#x5ea6;&#x66f4;&#x9ad8;&#x7684;&#x8c03;&#x5ea6;&#x5b9e;&#x4f53;&#x3002;&#x652f;&#x6301;&#x6309;&#x7ec4;&#x8c03;&#x5ea6;&#x7684;&#x610f;&#x4e49;&#x6709;&#x5f88;&#x591a;&#xff0c;&#x6bd4;&#x5982;&#x4e24;&#x4e2a;&#x7528;&#x6237;&#x540c;&#x65f6;&#x5728;&#x4f7f;&#x7528;&#x4e00;&#x53f0;&#x8ba1;&#x7b97;&#x673a;&#xff0c;&#x90a3;&#x4e48;&#x4e0d;&#x4ec5;&#x8981;&#x4fdd;&#x8bc1;&#x8fdb;&#x7a0b;&#x95f4; CPU &#x65f6;&#x95f4;&#x5206;&#x914d;&#x8981;&#x76f8;&#x5bf9;&#x5408;&#x7406;&#xff0c;&#x8fd8;&#x8981;&#x4fdd;&#x8bc1;&#x7528;&#x6237;&#x95f4;&#x5206;&#x914d;&#x7684;&#x5408;&#x7406;&#x6027;&#xff0c;&#x5426;&#x5219;&#x4e00;&#x4e2a;&#x7528;&#x6237;&#x53ef;&#x4ee5;&#x521b;&#x5efa;&#x5927;&#x91cf;&#x8fdb;&#x7a0b;&#x6765;&#x62a2;&#x5360; CPU &#x65f6;&#x95f4;&#x3002;</p>
+</blockquote>
+<p>&#x53ef;&#x4ee5;&#x5c06;&#x652f;&#x6301;&#x4e86;&#x6309;&#x7ec4;&#x8c03;&#x5ea6;&#x7684;&#x8fd0;&#x884c;&#x961f;&#x5217;&#x4e0e;&#x4e00;&#x4e2a;&#x6811;&#x7c7b;&#x6bd4;&#xff0c;&#x5f62;&#x6210;&#x4e00;&#x4e2a;&#x591a;&#x5c42;&#x7ed3;&#x6784;&#xff0c;&#x5219;&#x6811;&#x7684;&#x6839;&#x8282;&#x70b9;&#x4e3a;&#x8fd9;&#x4e2a;&#x961f;&#x5217;&#xff08;&#x89c1;&#x4e0b;&#x4e00;&#x6bb5;&#xff09;&#xff0c;&#x53f6;&#x8282;&#x70b9;&#x8981;&#x4e48;&#x662f; PSE&#xff0c;&#x8981;&#x4e48;&#x662f;&#x4e00;&#x4e2a;&#x7a7a;&#x961f;&#x5217;&#xff1b;&#x4e2d;&#x95f4;&#x8282;&#x70b9;&#x8981;&#x4e48;&#x662f; GSE&#xff0c;&#x8981;&#x4e48;&#x662f;&#x975e;&#x7a7a;&#x961f;&#x5217;&#x3002;</p>
+<p>&#x8fd0;&#x884c;&#x961f;&#x5217;&#x53c8;&#x53ef;&#x5206;&#x4e3a;&#x4e24;&#x7c7b;&#xff1a;</p>
+<ol>
+<li>&#x666e;&#x901a;&#x8fd0;&#x884c;&#x961f;&#x5217;&#xff0c;&#x8fd9;&#x7c7b;&#x8fd0;&#x884c;&#x961f;&#x5217;&#x4e0d;&#x76f4;&#x63a5;&#x7ba1;&#x8f96;&#x8c03;&#x5ea6;&#x5b9e;&#x4f53;&#xff0c;&#x800c;&#x662f;&#x901a;&#x8fc7;&#x7ba1;&#x8f96;&#x591a;&#x4e2a;&#x5b50;&#x961f;&#x5217;&#x6765;&#x5b9e;&#x73b0;&#x8c03;&#x5ea6;&#xff1b;&#x6bcf;&#x4e2a; CPU &#x90fd;&#x4f1a;&#x6709;&#x4e00;&#x4e2a;&#x666e;&#x901a;&#x8fd0;&#x884c;&#x961f;&#x5217;&#x3002;</li>
+<li>&#x8c03;&#x5ea6;&#x5668;&#x4e13;&#x7528;&#x961f;&#x5217;&#x3002;&#x8fd9;&#x4e9b;&#x961f;&#x5217;&#x5747;&#x5bf9;&#x5e94;&#x4e00;&#x7c7b;&#x8c03;&#x5ea6;&#x5668;&#xff0c;&#x5982; CFS &#x961f;&#x5217;&#x3001;RT &#x961f;&#x5217;&#x7b49;&#x3002;</li>
+</ol>
+<p>&#x666e;&#x901a;&#x8fd0;&#x884c;&#x961f;&#x5217;&#x7684;&#x90e8;&#x5206;&#x5b9a;&#x4e49;&#x4e3a;&#xff1a;</p>
+<pre><code class="language-c">// /kernel/sched/sched.h
+// &#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;
+struct rq {
+    unsigned int		nr_running; // &#x961f;&#x5217;&#x4e2d;&#x5f53;&#x524d;&#x7ef4;&#x62a4;&#x7684;&#x5b9e;&#x4f53;&#x6570;&#x91cf;
+    struct cfs_rq		cfs; // CFS &#x5b50;&#x961f;&#x5217;
+    struct rt_rq		rt; // RT &#x5b50;&#x961f;&#x5217;
+    struct task_struct __rcu	*curr; // &#x5f53;&#x524d;&#x5b9e;&#x9645;&#x5728;&#x8fd0;&#x884c;&#x7684;&#x4efb;&#x52a1;
+};
+</code></pre>
+<p>&#x4ece;&#x4e0a;&#x9762;&#x7684;&#x4ee3;&#x7801;&#x80fd;&#x591f;&#x770b;&#x51fa;&#xff0c;&#x666e;&#x901a;&#x8fd0;&#x884c;&#x961f;&#x5217;&#x7ba1;&#x8f96;&#x4e86;&#x591a;&#x4e2a;&#x8c03;&#x5ea6;&#x5668;&#x4e13;&#x7528;&#x961f;&#x5217;&#xff0c;&#x8fd9;&#x4e9b;&#x5b50;&#x961f;&#x5217;&#x5206;&#x522b;&#x5bf9;&#x5e94;&#x4e00;&#x79cd;&#x8c03;&#x5ea6;&#x5668;&#x3002;</p>
+<p>CFS &#x8fd0;&#x884c;&#x961f;&#x5217;&#x7684;&#x5b9a;&#x4e49;&#x4e3a;&#xff1a;</p>
+<pre><code class="language-c">// /include/linux/sched.h
+// &#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;
+struct cfs_rq {
+    struct load_weight	load;
+    unsigned int		nr_running; // &#x7b2c;&#x4e00;&#x5c42;&#x8282;&#x70b9;&#x7684;&#x6570;&#x91cf;&#xff0c;&#x5373; PSE &#x548c; GSE &#x7684;&#x6570;&#x91cf;&#x548c;
+    unsigned int		h_nr_running;  // &#x6240;&#x6709;&#x5c42;&#x4e2d; PSE &#x6570;&#x91cf;&#x7684;&#x548c;
+    struct sched_entity	*curr;  // &#x961f;&#x5217;&#x5f53;&#x524d;&#x8fd0;&#x884c;&#x7684;&#x5b9e;&#x4f53;
+    struct sched_entity	*next;
+    struct sched_entity	*last;
+    struct sched_entity	*skip;
+};
+</code></pre>
+<p>&#x5bf9;&#x4e8e;&#x4f7f;&#x7528; CFS &#x8fdb;&#x884c;&#x8c03;&#x5ea6;&#x7684;&#x8c03;&#x5ea6;&#x5b9e;&#x4f53;&#xff0c;&#x5176;&#x5b9a;&#x4e49;&#x4e3a;&#xff1a;</p>
+<pre><code class="language-c">// /include/linux/sched.h
+// &#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;
+struct sched_entity {
+    struct rb_node			run_node; // &#x7ea2;&#x9ed1;&#x6811;&#x8282;&#x70b9;
+    struct list_head		group_node;  // &#x8fdb;&#x7a0b;&#x7ec4;&#x8282;&#x70b9;
+    u64				vruntime; // virtual runtime&#xff0c;&#x865a;&#x62df;&#x5355;&#x4f4d;&#x4e0a;&#x7684;&#x5df2;&#x8c03;&#x5ea6;&#x65f6;&#x95f4;
+#ifdef CONFIG_FAIR_GROUP_SCHED // &#x5982;&#x679c;&#x914d;&#x7f6e;&#x9009;&#x62e9;&#x652f;&#x6301; GSE
+    int				depth;  // GSE &#x7684;&#x6df1;&#x5ea6;
+    struct sched_entity		*parent; // GSE &#x7684;&#x7236;&#x7ec4;
+    struct cfs_rq			*cfs_rq; // &#x5f53;&#x524d;&#x7ec4;&#x5728;&#x54ea;&#x4e00;&#x6761;&#x961f;&#x5217;&#x4e0a;
+    struct cfs_rq			*my_q; // &#x5f53;&#x524d;&#x7ec4;&#x6240;&#x7ba1;&#x8f96;&#x7684;&#x90a3;&#x4e00;&#x6761;&#x961f;&#x5217;
+    unsigned long			runnable_weight; // my_q-&gt;h_nr_running &#x7684;&#x7f13;&#x5b58;
+#endif
+};
+</code></pre>
+<p>&#x4ece; CFS &#x8c03;&#x5ea6;&#x5b9e;&#x4f53;&#x7684;&#x5b9a;&#x4e49;&#x53ef;&#x4ee5;&#x770b;&#x51fa;&#xff0c;CFS &#x961f;&#x5217;&#x5b9e;&#x9645;&#x4e0a;&#x662f;&#x4e00;&#x4e2a;<em><strong>&#x7ea2;&#x9ed1;&#x6811;</strong></em>&#xff0c;&#x6811;&#x6839;&#x636e;&#x6bcf;&#x4e2a;&#x8282;&#x70b9;&#x7684;&#x6743;&#x91cd;&#x6765;&#x52a8;&#x6001;&#x8c03;&#x6574;&#xff0c;&#x4ece;&#x800c;&#x5feb;&#x901f;&#x83b7;&#x5f97;&#x4e0b;&#x4e00;&#x4e2a;&#x5e94;&#x5f53;&#x88ab;&#x8c03;&#x5ea6;&#x7684;&#x5b9e;&#x4f53;&#x3002;</p>
+<p>&#x770b;&#x5b8c;&#x6982;&#x5ff5;&#xff0c;&#x73b0;&#x5728;&#x56de;&#x5230;&#x8c03;&#x5ea6;&#x8fc7;&#x7a0b;&#x4e2d;&#x53bb;&#x3002;&#x5f53; <code>__pick_next_task()</code> &#x88ab;&#x8c03;&#x7528;&#x65f6;&#xff0c;&#x5b83;&#x5c06;&#x4f1a;&#x6839;&#x636e;&#x5f53;&#x524d;&#x8c03;&#x5ea6;&#x961f;&#x5217;&#x7684;&#x60c5;&#x51b5;&#x6765;&#x9009;&#x62e9;&#x8c03;&#x5ea6;&#x5668;&#x3002;&#x5982;&#x679c;&#x9009;&#x7528; CFS &#x8c03;&#x5ea6;&#x5668;&#xff0c;<code>__pick_next_task()</code> &#x8c03;&#x7528; <code>pick_next_task_fair()</code> &#xff1a;</p>
+<pre><code class="language-c">[schedule() &gt; __schedule() &gt; pick_next_task() &gt; __pick_next_task() &gt; pick_next_task_fair()]
+// /kernel/sched/fair.c
+// &#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;
+
+struct task_struct *
+pick_next_task_fair(struct rq *rq, struct task_struct *prev, struct rq_flags *rf)
+{
+    struct cfs_rq *cfs_rq = &amp;rq-&gt;cfs;
+    struct sched_entity *se;
+    struct task_struct *p;
+
+    // &#x4e0b;&#x9762;&#x7684;&#x5faa;&#x73af;&#x7528;&#x4e8e;&#x5728;&#x8fdb;&#x7a0b;&#x7ec4;&#x4e2d;&#x6700;&#x7ec8;&#x786e;&#x5b9a;&#x4e00;&#x4e2a;&#x8fdb;&#x7a0b;&#x3002;&#x89c1;&#x540e;&#x65b9;&#x4ee3;&#x7801;&#x6ce8;&#x91ca;&#x3002;
+    do {
+        struct sched_entity *curr = cfs_rq-&gt;curr;
+        // &#x8c03;&#x5ea6;&#x524d;&#xff0c;&#x5982;&#x679c;&#x5f53;&#x524d;&#x5b9e;&#x4f53;&#x8fd8;&#x5728;&#x961f;&#x5217;&#x4e2d;&#xff0c;&#x5219;&#x9996;&#x5148;&#x66f4;&#x65b0;&#x5f53;&#x524d;&#x5b9e;&#x4f53;&#x7684; vruntime&#xff0c;&#x5426;&#x5219;&#x76f4;&#x63a5;&#x5ffd;&#x7565;
+        if (curr) {
+            if (curr-&gt;on_rq)
+                update_curr(cfs_rq);
+            else
+                curr = NULL;
+        }
+
+        se = pick_next_entity(cfs_rq, curr);
+        // &#x5982;&#x679c; se &#x662f;&#x4e00;&#x4e2a;&#x8fdb;&#x7a0b;&#x7ec4;&#xff0c;&#x5219; group_cfs_rq &#x4f1a;&#x8fd4;&#x56de;&#x6b64;&#x8fdb;&#x7a0b;&#x7ec4;&#x4e2d;&#x7684; CFS &#x8fd0;&#x884c;&#x961f;&#x5217;&#xff0c;
+        // &#x5426;&#x5219;&#x4e3a; NULL&#x3002;
+        cfs_rq = group_cfs_rq(se);
+    } while (cfs_rq);
+    // &#x7c7b;&#x4f3c;&#x4e8e; container_of &#x7684;&#x5b9e;&#x73b0;
+    p = task_of(se);
+    if (prev != p) {
+        // &#x66f4;&#x65b0;&#x8fd0;&#x884c;&#x961f;&#x5217;&#xff0c;&#x4ee3;&#x7801;&#x7565;
+    }
+    return p;
+}
+</code></pre>
+<p>&#x4e0a;&#x9762;&#x4ee3;&#x7801;&#x4e2d;&#x6700;&#x91cd;&#x8981;&#x7684;&#x90e8;&#x5206;&#x5c31;&#x662f; <code>pick_next_entity()</code> &#xff0c;&#x5b83;&#x51b3;&#x5b9a;&#x5728;&#x5f53;&#x524d;&#x961f;&#x5217;&#x4e2d;&#x9009;&#x53d6;&#x54ea;&#x4e00;&#x4e2a;&#x5b9e;&#x4f53;&#x6765;&#x7ee7;&#x7eed;&#x8c03;&#x5ea6;&#x3002;&#x5176;&#x5b9e;&#x73b0;&#x4e3a;&#xff1a;</p>
+<pre><code class="language-c">[schedule() &gt; __schedule() &gt; pick_next_task() &gt; __pick_next_task() &gt; pick_next_task_fair() &gt; pick_next_entity()]
+// /kernel/sched/fair.c
+// &#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;
+static struct sched_entity *
+pick_next_entity(struct cfs_rq *cfs_rq, struct sched_entity *curr)
+{
+    struct sched_entity *left = __pick_first_entity(cfs_rq); // &#x8c03;&#x7528;&#x7ea2;&#x9ed1;&#x6811;&#x76f8;&#x5173;&#x501f;&#x53e3;&#x6765;&#x83b7;&#x53d6;&#x961f;&#x5217;&#x4e2d;&#x6700;&#x9760;&#x524d;&#x7684;&#x90a3;&#x4e2a;&#x5b9e;&#x4f53;
+    struct sched_entity *se;
+
+    /*
+     * &#x5982;&#x679c;&#x5f53;&#x524d;&#x8fd0;&#x884c;&#x7684;&#x5b9e;&#x4f53;&#x6bd4;&#x961f;&#x5217;&#x4e2d;&#x6700;&#x9760;&#x524d;&#x7684;&#x5b9e;&#x4f53;&#x8fd8;&#x8981;&#x9760;&#x524d;&#xff0c;&#x5219;&#x76f4;&#x63a5;&#x66f4;&#x65b0; left &#x4e3a;&#x5f53;&#x524d;&#x5b9e;&#x4f53;
+     */
+    if (!left || (curr &amp;&amp; entity_before(curr, left)))
+        left = curr;
+
+    se = left; /* &#x7406;&#x60f3;&#x60c5;&#x51b5;&#x4e0b;&#xff0c;&#x6700;&#x7ec8;&#x9009;&#x5b9a;&#x7684;&#x8fd0;&#x884c;&#x5b9e;&#x4f53;&#x5c31;&#x5e94;&#x8be5;&#x662f;&#x8fd9;&#x4e2a;&#x6700;&#x9760;&#x524d;&#x7684; */
+
+    /*
+     * &#x4f46;&#x662f;&#x8fd8;&#x6709;&#x4e00;&#x4e9b;&#x6761;&#x4ef6;&#x9700;&#x8981;&#x6ce8;&#x610f;&#x3002;&#x53ea;&#x8981;&#x4e0d;&#x4f1a;&#x592a;&#x4e0d;&#x516c;&#x5e73;&#xff0c;&#x8981;&#x907f;&#x514d;&#x8fd0;&#x884c;&#x6807;&#x8bb0;&#x4e3a; skip &#x7684;&#x5b9e;&#x4f53;&#x3002;
+     */
+    if (cfs_rq-&gt;skip &amp;&amp; cfs_rq-&gt;skip == se) {
+        struct sched_entity *second;
+
+        // &#x6311;&#x9009;&#x4e00;&#x4e2a;&#x5907;&#x9009;&#x5b9e;&#x4f53;&#x6765;&#x66ff;&#x6362;&#x5f53;&#x524d;&#x9009;&#x62e9;&#x7684; se&#x3002;&#x5982;&#x679c; se &#x5c31;&#x662f;&#x5f53;&#x524d;&#x6b63;&#x5728;&#x8fd0;&#x884c;&#x7684;&#x5b9e;&#x4f53;&#xff0c;&#x90a3;&#x6211;&#x4eec;&#x53ea;&#x9700;&#x8981;
+        // &#x4ece;&#x961f;&#x5217;&#x4e2d;&#x9009;&#x53d6;&#x6700;&#x5de6;&#x4fa7;&#x7684;&#x90a3;&#x4e2a;&#x5b9e;&#x4f53;&#x6765;&#x66ff;&#x6362;&#x5b83;&#x3002;&#x5982;&#x679c; se &#x4e0d;&#x662f;&#x5f53;&#x524d;&#x5728;&#x8fd0;&#x884c;&#x7684;&#xff0c;&#x5219;&#x9700;&#x8981;&#x4ece;&#x961f;&#x5217;&#x4e2d;&#x83b7;&#x53d6;
+        // se &#x7684;&#x4e0b;&#x4e00;&#x4e2a;&#x8282;&#x70b9;&#xff0c;&#x5e76;&#x4e0e; curr &#x8fdb;&#x884c;&#x5bf9;&#x6bd4;&#xff0c;&#x9009;&#x62e9;&#x4e24;&#x8005;&#x4e4b;&#x95f4;&#x66f4;&#x9760;&#x524d;&#x7684;&#x90a3;&#x4e2a;&#x3002;
+        if (se == curr) {
+            second = __pick_first_entity(cfs_rq);
+        } else {
+            second = __pick_next_entity(se);  // &#x5bf9;&#x7ea2;&#x9ed1;&#x6811;&#x76f8;&#x5173;&#x63a5;&#x53e3;&#x8c03;&#x7528;&#x7684;&#x5c01;&#x88c5;
+            if (!second || (curr &amp;&amp; entity_before(curr, second)))
+                second = curr;
+        }
+
+        // wakeup_preempt_entity &#x7528;&#x4e8e;&#x8ba1;&#x7b97; second &#x548c; left &#x662f;&#x5426;&#x5927;&#x4e8e;&#x67d0;&#x4e2a;&#x6700;&#x5c0f;&#x62a2;&#x5360;&#x7c92;&#x5ea6;&#xff0c;&#x5982;&#x679c;&#x662f;&#x5219;
+        // &#x8fd4;&#x56de; 1&#xff0c;&#x5426;&#x5219;&#x8fd4;&#x56de; -1 &#x6216; 0&#x3002;&#x7b80;&#x5355;&#x5730;&#x8bf4;&#xff0c;&#x8fd9;&#x4e2a;&#x51fd;&#x6570;&#x5728;
+        //     second-&gt;vruntime - left-&gt;vruntime &lt;= some_threshold
+        // &#x65f6;&#x8fd4;&#x56de; -1 &#x6216; 0&#xff0c;&#x8868;&#x793a;&#x6b64;&#x65f6;&#x8ba9; second &#x8fd0;&#x884c;&#x66f4;&#x7b26;&#x5408;&#x8c03;&#x5ea6;&#x7b56;&#x7565;&#x3001;&#x66f4;&#x516c;&#x5e73;&#x3002;&#x5b9e;&#x9645;&#x7684;&#x8ba1;&#x7b97;&#x6bd4;&#x8f83;&#x590d;&#x6742;&#xff0c;&#x53ef;
+        // &#x81ea;&#x884c;&#x9605;&#x8bfb;&#x6e90;&#x7801;&#x3002;
+        if (second &amp;&amp; wakeup_preempt_entity(second, left) &lt; 1)
+            se = second;
+    }
+
+    if (cfs_rq-&gt;next &amp;&amp; wakeup_preempt_entity(cfs_rq-&gt;next, left) &lt; 1) {
+        // &#x6807;&#x8bb0;&#x4e3a; next &#x7684;&#x5b9e;&#x4f53;&#x8868;&#x793a;&#x67d0;&#x4e9b;&#x5730;&#x65b9;&#x5e0c;&#x671b;&#x8fd9;&#x4e2a;&#x5b9e;&#x4f53;&#x5c3d;&#x53ef;&#x80fd;&#x5148;&#x8fd0;&#x884c;&#x3002;&#x53ea;&#x8981;&#x4e0d;&#x4f1a;&#x592a;&#x4e0d;&#x516c;&#x5e73;&#xff0c;&#x5c31;&#x5141;&#x8bb8;&#x4f18;&#x5148;&#x8fd0;&#x884c;&#x3002;
+        se = cfs_rq-&gt;next;
+    } else if (cfs_rq-&gt;last &amp;&amp; wakeup_preempt_entity(cfs_rq-&gt;last, left) &lt; 1) {
+        // &#x6807;&#x8bb0;&#x4e3a; last &#x7684;&#x5b9e;&#x4f53;&#x662f;&#x4e0a;&#x6b21;&#x88ab;&#x62a2;&#x5360;&#x7684;&#x5b9e;&#x4f53;&#x3002;&#x53ea;&#x8981;&#x4e0d;&#x4f1a;&#x592a;&#x4e0d;&#x516c;&#x5e73;&#xff0c;&#x8003;&#x8651;&#x5230;&#x7f13;&#x5b58;&#x7684;&#x672c;&#x5730;&#x6027;&#xff0c;&#x4f18;&#x5148;&#x8fd0;&#x884c;&#x8fd9;&#x4e2a;&#x5b9e;&#x4f53;&#x3002;
+        se = cfs_rq-&gt;last;
+    }
+
+    return se;
+}
+</code></pre>
+<h3>&#x8fdb;&#x7a0b;&#x5207;&#x6362;</h3>
+<p>&#x4e0a;&#x9762;&#x7684;&#x8c03;&#x5ea6;&#x8fc7;&#x7a0b;&#x4e2d;&#x5df2;&#x7ecf;&#x901a;&#x8fc7;&#x8c03;&#x5ea6;&#x5668;&#x9009;&#x62e9;&#x4e86;&#x4e00;&#x4e2a;&#x8fdb;&#x7a0b;&#x6765;&#x6267;&#x884c;&#xff0c;&#x63a5;&#x4e0b;&#x6765;&#x5c31;&#x8981;&#x5f00;&#x59cb;&#x5b9e;&#x9645;&#x5730;&#x5207;&#x6362;&#x8fdb;&#x7a0b;&#x4e86;&#x3002;<code>__schedule()</code> &#x63a5;&#x4e0b;&#x6765;&#x5c06;&#x8c03;&#x7528; <code>context_switch()</code> &#x6765;&#x5207;&#x6362;&#x4efb;&#x52a1;&#x3002;<em>&#x5207;&#x6362;&#x4efb;&#x52a1;</em>&#x5177;&#x4f53;&#x7684;&#x5de5;&#x4f5c;&#xff0c;&#x5728;&#x4ee3;&#x7801;&#x5f00;&#x5934;&#x7684;&#x6ce8;&#x91ca;&#x4e2d;&#x5df2;&#x7ecf;&#x8bf4;&#x5f97;&#x975e;&#x5e38;&#x6e05;&#x695a;&#xff1a;</p>
+<pre><code class="language-c">// /kernel/sched/core.c
+// &#x4ee3;&#x7801;&#x4e3a;&#x8282;&#x9009;
+/*
+ * context_switch - switch to the new MM and the new thread&apos;s register state.
+ * &#x5207;&#x6362;&#x5230;&#x65b0;&#x7684;&#x5185;&#x5b58;&#x6620;&#x5c04;&#x5e76;&#x66f4;&#x65b0;&#x5bc4;&#x5b58;&#x5668;
+ */
+static __always_inline struct rq *
+context_switch(struct rq *rq, struct task_struct *prev,
+           struct task_struct *next, struct rq_flags *rf)
+{
+    /*
+     * kernel -&gt; kernel   lazy + transfer active
+     *   user -&gt; kernel   lazy + mmgrab() active
+     *
+     * kernel -&gt;   user   switch + mmdrop() active
+     *   user -&gt;   user   switch
+     *
+     * &#x4e0a;&#x9762;&#x7684;&#x6ce8;&#x91ca;&#x8bf4;&#x660e;&#x4e86;&#x56db;&#x79cd;&#x60c5;&#x51b5;&#x3002;switch &#x8868;&#x793a;&#x9700;&#x8981;&#x5207;&#x6362;&#x5185;&#x5b58;&#x6620;&#x5c04;&#xff0c;lazy &#x8868;&#x793a;&#x4e0d;&#x9700;&#x8981;
+     * &#x5207;&#x6362;&#x5185;&#x5b58;&#x6620;&#x5c04;&#x3002;&#x7531;&#x4e8e;&#x5185;&#x6838;&#x7ebf;&#x7a0b;&#x6ca1;&#x6709;&#x81ea;&#x5df1;&#x7684;&#x5185;&#x5b58;&#x7a7a;&#x95f4;&#xff0c;&#x5b83;&#x5c06;&#x76f4;&#x63a5;&#x6cbf;&#x7528;&#x7528;&#x6237;&#x7a7a;&#x95f4;&#x8fdb;&#x7a0b;&#x7684;
+     * &#x5185;&#x5b58;&#x6620;&#x5c04;&#xff1b;mmgrab &#x548c; mmdrop &#x7528;&#x4e8e;&#x5f15;&#x7528;&#x8ba1;&#x6570;&#xff0c;&#x9632;&#x6b62;&#x5185;&#x5b58;&#x6620;&#x5c04;&#x5728;&#x5176;&#x5c5e;&#x4e3b;&#x8fdb;&#x7a0b;&#x9000;&#x51fa;
+     * &#x540e;&#x88ab;&#x91ca;&#x653e;&#x3002;
+     */
+    if (!next-&gt;mm) {  // &#x4e0b;&#x4e00;&#x4e2a;&#x4efb;&#x52a1;&#x4e3a;&#x5185;&#x6838;&#x7ebf;&#x7a0b;
+        // &#x5207;&#x6362;&#x5230;&#x5185;&#x6838;&#x7ebf;&#x7a0b;&#x3002;&#x5728;&#x4e00;&#x4e9b;&#x67b6;&#x6784;&#x4e0a;&#x8fd9;&#x610f;&#x5473;&#x7740;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#xff0c;&#x5728; x86 &#x4e0a;&#x9700;&#x8981;&#x66f4;&#x65b0; TLB&#x3002;
+        // &#x5177;&#x4f53;&#x53ef;&#x89c1;&#x8be5;&#x51fd;&#x6570;&#x7684;&#x6ce8;&#x91ca;&#x3002;
+        enter_lazy_tlb(prev-&gt;active_mm, next);
+
+        next-&gt;active_mm = prev-&gt;active_mm;
+        if (prev-&gt;mm)  // &#x4e0a;&#x4e00;&#x4e2a;&#x4efb;&#x52a1;&#x662f;&#x7528;&#x6237;&#x8fdb;&#x7a0b;
+            // &#x9012;&#x589e; prev-&gt;active_mm &#x7684;&#x5f15;&#x7528;&#x8ba1;&#x6570;&#x5668;
+            mmgrab(prev-&gt;active_mm);
+        else  // &#x4e0a;&#x4e00;&#x4e2a;&#x4efb;&#x52a1;&#x662f;&#x5185;&#x6838;&#x7ebf;&#x7a0b;
+            prev-&gt;active_mm = NULL;
+    } else {  // &#x4e0b;&#x4e00;&#x4e2a;&#x4efb;&#x52a1;&#x4e3a;&#x7528;&#x6237;&#x8fdb;&#x7a0b;
+        // &#x9000;&#x51fa;&#x5185;&#x6838;&#x7ebf;&#x7a0b;
+        switch_mm_irqs_off(prev-&gt;active_mm, next-&gt;mm, next);
+
+        if (!prev-&gt;mm) {   // &#x4e0a;&#x4e00;&#x4e2a;&#x4efb;&#x52a1;&#x662f;&#x5185;&#x6838;&#x7ebf;&#x7a0b;
+            // &#x4ece;&#x5bf9;&#x79f0;&#x6027;&#x7684;&#x89d2;&#x5ea6;&#xff0c;&#x5e94;&#x8be5;&#x9012;&#x51cf;&#x4e00;&#x6b21; prev-&gt;active_mm &#x7684;&#x5f15;&#x7528;&#x8ba1;&#x6570;&#x5668;&#xff1b;
+            // &#x4f46;&#x662f;&#x8fd9;&#x4e2a;&#x5de5;&#x4f5c;&#x5b9e;&#x9645;&#x4e0a;&#x662f;&#x7531; finish_task_switch &#x6765;&#x5b8c;&#x6210;
+            rq-&gt;prev_mm = prev-&gt;active_mm;
+            prev-&gt;active_mm = NULL;
+        }
+    }
+
+    /* &#x66f4;&#x65b0;&#x5bc4;&#x5b58;&#x5668;&#x548c;&#x6808;&#x3002;&#x6bcf;&#x4e2a;&#x7ed3;&#x6784;&#x4f53;&#x7cfb;&#x90fd;&#x63d0;&#x4f9b;&#x81ea;&#x5df1;&#x7684;&#x5b9e;&#x73b0;&#x3002; */
+    switch_to(prev, next, prev);
+
+    // &#x5584;&#x540e;&#x5de5;&#x4f5c;&#xff0c;&#x5305;&#x62ec;&#x6e05;&#x7406;&#x6389;&#x72b6;&#x6001;&#x4e3a; dead &#x7684;&#x4efb;&#x52a1;
+    return finish_task_switch(prev);
+}
+</code></pre>
+<h3>&#x601d;&#x8003;&#x9898;</h3>
+<p>&#x8fdb;&#x7a0b;&#x8c03;&#x5ea6;&#x975e;&#x5e38;&#x590d;&#x6742;&#x3002;&#x4e0a;&#x9762;&#x7684;&#x4ecb;&#x7ecd;&#x5b9e;&#x9645;&#x4e0a;&#x7565;&#x8fc7;&#x4e86;&#x5f88;&#x591a;&#x95ee;&#x9898;&#xff0c;&#x5305;&#x62ec;&#x4f46;&#x4e0d;&#x9650;&#x4e8e;&#xff1a;</p>
+<ol>
+<li>vruntime &#x5982;&#x4f55;&#x66f4;&#x65b0;&#xff1f;</li>
+<li>&#x5982;&#x4f55;&#x8ba1;&#x7b97;&#x6bcf;&#x4e2a;&#x5b9e;&#x4f53;&#x7684;&#x8fd0;&#x884c;&#x65f6;&#x95f4;&#xff1f;</li>
+<li>&#x961f;&#x5217;&#x7ea2;&#x9ed1;&#x6811;&#x5982;&#x4f55;&#x5efa;&#x7acb;&#xff1f;</li>
+</ol>
+
+  </article>
+</main>
+    <footer class="flex">
+  <a href="/">&#xa9; Harlan V. Wei (aka. Wei Chen)</a>
+  <strong></strong>
+</footer>
+  </body>
+
+</html>

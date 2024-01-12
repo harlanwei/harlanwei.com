@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<title>ElGamal &#x6a21;&#x8fd0;&#x7b97;&#x52a0;&#x5bc6;&#x4e0e;&#x692d;&#x5706;&#x66f2;&#x7ebf;&#x52a0;&#x5bc6;&#x7684;&#x7c7b;&#x6bd4;</title>
+<meta name="generator" content="Nue (nuejs.org)">
+<meta name="date.updated" content="2024-01-12T14:03:51.360Z">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="&#x540c;&#x4e3a; Diffie-Hellman &#x6846;&#x67b6;&#x4e0b;&#x7684;&#x52a0;&#x5bc6;&#x7b97;&#x6cd5;&#xff0c;&#x692d;&#x5706;&#x66f2;&#x7ebf;&#x52a0;&#x5bc6;&#x7b97;&#x6cd5;&#x662f;&#x5982;&#x4f55;&#x53d1;&#x5c55;&#x800c;&#x6765;&#x7684;&#xff1f;&#x8fd9;&#x7bc7;&#x6587;&#x7ae0;&#x5e26;&#x4f60;&#x4e86;&#x89e3;&#x3002;">
+<meta property="article:published_time" content="2021-10-24T17:00:00.000Z">
+<link rel="shortcut icon" type="image/jpg" src="/img/favicon.jpg">
+<link href="/global/global.css" rel="stylesheet">
+<link href="/posts/post.css" rel="stylesheet">
+<script src="/global/main.js" type="module"></script>
+<script src="/@nue/page-router.js" type="module"></script>
+    
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  </head>
+
+  <body>
+    <header class="flex">
+  <a class="flex homelink" href="/">
+    <img alt="Avatar image" width="64" height="64" src="/img/avatar.jpg">
+    <strong>Harlan V. Wei (aka. Wei Chen)</strong>
+  </a>
+  <nav>
+    <a target="_blank" href="mailto:contact@harlanwei.com">
+      <img class="icon" width="30" height="30" src="/img/email.svg" alt="My Email">
+    </a><a target="_blank" href="//twitter.com/imharlanwei">
+      <img class="icon" width="30" height="30" src="/img/twitter.svg" alt="Twitter profile">
+    </a><a target="_blank" href="//github.com/harlanwei/">
+      <img class="icon" width="30" height="30" src="/img/github.svg" alt="Github projects">
+    </a><a target="_blank" href="//www.linkedin.com/in/harlanwei/">
+      <img class="icon" width="30" height="30" src="/img/linkedin.svg" alt="LinkedIn profile">
+    </a>
+  </nav>
+</header>
+    <main lang="zh-Hans">
+
+  <h1>ElGamal &#x6a21;&#x8fd0;&#x7b97;&#x52a0;&#x5bc6;&#x4e0e;&#x692d;&#x5706;&#x66f2;&#x7ebf;&#x52a0;&#x5bc6;&#x7684;&#x7c7b;&#x6bd4;</h1>
+
+  <p>
+    <time>October 25, 2021</time>
+    <span> &#x2022; Photo credits: <a class="backlit" target="_blank" href="https://unsplash.com/@flyd2069">FlyD on Unsplash</a></span>
+  </p>
+
+  <img class="hero" style="max-height: 400px; width: 100%; object-fit: cover;" src="https://images.unsplash.com/photo-1618060931775-18ed14951776?w=640" alt="Hero image for ElGamal &#x6a21;&#x8fd0;&#x7b97;&#x52a0;&#x5bc6;&#x4e0e;&#x692d;&#x5706;&#x66f2;&#x7ebf;&#x52a0;&#x5bc6;&#x7684;&#x7c7b;&#x6bd4;">
+
+  <article>
+    <blockquote>
+<p>This post is only available in Chinese at this moment.</p>
+</blockquote>
+<p>Diffie &#x548c; Hellman &#x5728;&#x300a;&#x5bc6;&#x7801;&#x5b66;&#x7684;&#x65b0;&#x65b9;&#x5411;&#x300b;&#xff08;New Directions in Cryptography&#xff09;&#x8fd9;&#x7bc7;&#x8bba;&#x6587;&#x4e2d;&#x63d0;&#x51fa;&#x4e86;&#x975e;&#x5bf9;&#x79f0;&#x52a0;&#x5bc6;&#x7684;&#x601d;&#x60f3;&#xff0c;&#x5373;&#x5229;&#x7528;&#x9677;&#x95e8;&#x51fd;&#x6570;&#x6765;&#x751f;&#x6210;&#x516c;&#x79c1;&#x5bc6;&#x94a5;&#x3002;&#x9677;&#x95e8;&#x51fd;&#x6570;&#x6307;&#x7684;&#x662f;&#x8fd9;&#x6837;&#x4e00;&#x7c7b;&#x51fd;&#x6570;&#xff1a;&#x5047;&#x8bbe;&#x6709;&#x51fd;&#x6570; <em>y=f(x)</em>&#xff0c;&#x5f88;&#x5bb9;&#x6613;&#x4ece; <em>x</em> &#x8ba1;&#x7b97;&#x5230; <em>y</em>&#xff0c;&#x4f46;&#x5f88;&#x96be;&#x4f7f;&#x7528;&#x73b0;&#x6709;&#x7684;&#x8ba1;&#x7b97;&#x6280;&#x672f;&#x5728;&#x53ef;&#x9884;&#x89c1;&#x7684;&#x65f6;&#x95f4;&#x5185;&#x8ba1;&#x7b97;&#x51fa; <em>x</em>&#x3002;&#x6211;&#x4eec;&#x53ef;&#x4ee5;&#x5229;&#x7528;&#x9677;&#x95e8;&#x51fd;&#x6570;&#x7684;&#x8fd9;&#x4e00;&#x7279;&#x6027;&#x751f;&#x6210;&#x516c;&#x94a5;&#xff0c;&#x516c;&#x94a5;&#x53ef;&#x4ee5;&#x5728;&#x4e0d;&#x5b89;&#x5168;&#x4fe1;&#x9053;&#x4e0a;&#x8fdb;&#x884c;&#x4f20;&#x8f93;&#xff0c;&#x5e76;&#x4e14;&#x4e0d;&#x4f1a;&#x5a01;&#x80c1;&#x5230;&#x5bc6;&#x6587;&#x672c;&#x8eab;&#x7684;&#x5b89;&#x5168;&#x6027;&#x8d28;&#x3002;Diffie-Hellman &#x6846;&#x67b6;&#x7684;&#x601d;&#x60f3;&#xff0c;&#x7b80;&#x5355;&#x6765;&#x8bf4;&#x5c31;&#x662f;&#xff1a;&#x53c2;&#x4e0e;&#x5b89;&#x5168;&#x901a;&#x4fe1;&#x7684;&#x6240;&#x6709;&#x4eba;&#x751f;&#x6210;&#x516c;&#x94a5;&#x548c;&#x79c1;&#x94a5;&#xff0c;A &#x5411; B &#x53d1;&#x9001;&#x6d88;&#x606f;&#x65f6;&#x4f7f;&#x7528; B &#x7684;&#x516c;&#x94a5;&#x6765;&#x52a0;&#x5bc6;&#x660e;&#x6587;&#xff0c;B &#x83b7;&#x53d6;&#x5bc6;&#x6587;&#x540e;&#x4f7f;&#x7528;&#x81ea;&#x5df1;&#x7684;&#x79c1;&#x94a5;&#x89e3;&#x5bc6;&#x6765;&#x83b7;&#x53d6;&#x660e;&#x6587;&#xff1b;&#x516c;&#x94a5;&#x548c;&#x79c1;&#x94a5;&#x4e4b;&#x95f4;&#x7684;&#x7ebd;&#x5e26;&#x901a;&#x8fc7;&#x9677;&#x95e8;&#x51fd;&#x6570;&#x6765;&#x5efa;&#x7acb;&#x3002;</p>
+<p>ElGamal &#x6839;&#x636e;&#x8fd9;&#x4e2a;&#x601d;&#x60f3;&#x5b8c;&#x6574;&#x5730;&#x63d0;&#x51fa;&#x4e86;&#x57fa;&#x4e8e;&#x79bb;&#x6563;&#x5bf9;&#x6570;&#x7684;&#x52a0;&#x5bc6;&#x7cfb;&#x7edf;&#x3002;&#x8fd9;&#x4e00;&#x7cfb;&#x7edf;&#x4e2d;&#x7684;&#x9677;&#x95e8;&#x51fd;&#x6570;&#x5373;&#x6a21;&#x51fd;&#x6570;&#xff0c;&#x5176;&#x9677;&#x95e8;&#x6027;&#x8d28;&#x6765;&#x6e90;&#x4e8e;&#x79bb;&#x6563;&#x5bf9;&#x6570;&#x56f0;&#x96be;&#x6027;&#x5047;&#x8bbe;&#x3002;&#x7b80;&#x5355;&#x5730;&#x8bf4;&#xff0c;Alice &#x548c; Bob &#x4e24;&#x4eba;&#x60f3;&#x8981;&#x8fdb;&#x884c;&#x52a0;&#x5bc6;&#x901a;&#x4fe1;&#x3002;Alice &#x5728;&#x5bc6;&#x94a5;&#x7a7a;&#x95f4;&#x4e2d;&#x6309;&#x7167;&#x5747;&#x5300;&#x5206;&#x5e03;&#x9009;&#x53d6;&#x4e00;&#x4e2a;&#x5bc6;&#x94a5; &#x24;K_A&#x24;&#xff0c;&#x6839;&#x636e;&#x5bc6;&#x94a5;&#x751f;&#x6210;&#x516c;&#x94a5;&#xff1a;&#x24;(P_A = \alpha^{K_A} \mod p, \alpha, p)&#x24;&#xff1b;Bob &#x6309;&#x7167;&#x540c;&#x6837;&#x7684;&#x65b9;&#x5f0f;&#x751f;&#x6210;&#x516c;&#x94a5;&#x548c;&#x79c1;&#x94a5;&#x3002;Bob &#x5411; Alice &#x53d1;&#x9001;&#x6d88;&#x606f; m &#x65f6;&#xff0c;&#x968f;&#x673a;&#x5730;&#x4ece; &#x24;[0, p-1]&#x24; &#x7684;&#x6b63;&#x6574;&#x6570;&#x5185;&#x9009;&#x53d6;&#x4e00;&#x4e2a;&#x4e34;&#x65f6;&#x5bc6;&#x94a5; <em>k</em>&#xff0c;&#x5411; Alice &#x53d1;&#x9001;&#xff1a;</p>
+<p>&#x24;&#x24;
+c_1 = \alpha^k \mod p\newline
+c_2=Km\mod p\newline
+K = P_A^k\mod p
+&#x24;&#x24;</p>
+<p>Alice &#x8981;&#x89e3;&#x5bc6;&#xff0c;&#x9996;&#x5148;&#x9700;&#x8981;&#x77e5;&#x9053; &#x24;c_2&#x24; &#x4e2d;&#x7684; K&#xff0c;&#x800c; &#x24;K=P_A^k=\alpha^{K_A k}=c_1^{K_A}&#x24;&#xff0c;&#x56e0;&#x6b64;&#x5f88;&#x5bb9;&#x6613;&#x53ef;&#x4ee5;&#x89e3;&#x5f97; <em>m</em>&#x3002;&#x800c;&#x5bf9;&#x4e8e;&#x653b;&#x51fb;&#x8005;&#x6765;&#x8bf4;&#xff0c;&#x8ba1;&#x7b97;&#x51fa; <em>m</em> &#x8981;&#x9996;&#x5148;&#x8ba1;&#x7b97; &#x24;K_A&#x24;&#xff0c;&#x8fd9;&#x5b9e;&#x9645;&#x4e0a;&#x662f;&#x5728;&#x89e3;&#x79bb;&#x6563;&#x5bf9;&#x6570;&#x95ee;&#x9898;&#x3002;</p>
+<p>&#x5bf9;&#x4e8e;&#x8fde;&#x7eed;&#x53ef;&#x5bfc;&#x51fd;&#x6570;&#x6765;&#x8bf4;&#xff0c;&#x6211;&#x4eec;&#x53ef;&#x4ee5;&#x4f7f;&#x7528;&#x6cf0;&#x52d2;&#x5c55;&#x5f00;&#x6765;&#x8ba1;&#x7b97;&#x5bf9;&#x6570;&#xff0c;&#x7136;&#x800c;&#x5bf9;&#x4e8e;&#x79bb;&#x6563;&#x51fd;&#x6570;&#x6765;&#x8bf4;&#xff0c;&#x76ee;&#x524d;&#x5c1a;&#x65e0;&#x5df2;&#x77e5;&#x7684;&#x6709;&#x6548;&#x8ba1;&#x7b97;&#x5bf9;&#x6570;&#x7684;&#x65b9;&#x6cd5;&#xff0c;&#x5c24;&#x5176;&#x662f; ElGamal &#x52a0;&#x5bc6;&#x7cfb;&#x7edf;&#x5b9e;&#x9645;&#x4e0a;&#x8fd8;&#x5229;&#x7528;&#x4e86;&#x6a21;&#x8fd0;&#x7b97;&#x5f62;&#x6210;&#x5faa;&#x73af;&#x7fa4;&#xff0c;&#x8fd9;&#x4f7f;&#x5f97;&#x8ba1;&#x7b97;&#x51fa;&#x5b9e;&#x9645;&#x7684;&#x5bc6;&#x94a5; k &#x53d8;&#x5f97;&#x66f4;&#x52a0;&#x56f0;&#x96be;&#xff08;&#x56f0;&#x96be;&#x4e4b;&#x5904;&#x5728;&#x4e8e;&#xff1a;&#x5bf9;&#x4e8e; &#x24;y=x\mod A&#x24;&#xff0c;&#x4e00;&#x4e2a; y &#x5bf9;&#x5e94;&#x4e86;&#x5f88;&#x591a; x&#xff09;&#x3002;&#x8fd9;&#x4e5f;&#x5c31;&#x662f;&#x8bf4;&#xff0c;&#x901a;&#x8fc7;&#x5bfb;&#x627e;&#x8fd9;&#x7c7b;&#x79bb;&#x6563;&#x5bf9;&#x6570;&#x96be;&#x8ba1;&#x7b97;&#x7684;&#x7fa4;&#xff0c;&#x6211;&#x4eec;&#x53ef;&#x4ee5;&#x5f62;&#x6210;&#x5404;&#x79cd;&#x65b0;&#x7684;&#x52a0;&#x5bc6;&#x7cfb;&#x7edf;&#x65b9;&#x6848;&#x3002;</p>
+<p>&#x692d;&#x5706;&#x66f2;&#x7ebf;&#x52a0;&#x5bc6;&#x7b97;&#x6cd5;&#x5b9e;&#x9645;&#x4e0a;&#x540c;&#x6837;&#x4e5f;&#x662f; Diffie-Hellman &#x4f53;&#x7cfb;&#x5185;&#x7684;&#x7b97;&#x6cd5;&#x3002;&#x5bf9;&#x6bd4;&#x4e8e; ElGamal &#x7b97;&#x6cd5;&#x6765;&#x8bf4;&#xff0c;&#x524d;&#x8005;&#x662f;&#x5728;&#x4f7f;&#x7528;&#x6a21;&#x8fd0;&#x7b97;&#x6765;&#x4fdd;&#x8bc1;&#x5bc6;&#x94a5;&#x7684;&#x5b89;&#x5168;&#xff0c;&#x800c;&#x540e;&#x8005;&#x4f7f;&#x7528;&#x692d;&#x5706;&#x66f2;&#x7ebf;&#xff0c;&#x8fd0;&#x7b97;&#x66f4;&#x52a0;&#x590d;&#x6742;&#xff0c;&#x56e0;&#x6b64;&#x80fd;&#x591f;&#x4fdd;&#x8bc1;&#x66f4;&#x9ad8;&#x7684;&#x5b89;&#x5168;&#x6027;&#xff08;&#x5728;&#x77e5;&#x9053;&#x692d;&#x5706;&#x66f2;&#x7ebf;&#x53c2;&#x6570;&#x7684;&#x524d;&#x63d0;&#x4e0b;&#xff0c;&#x9009;&#x5b9a;&#x70b9; <em>A</em>&#xff0c;&#x8ba1;&#x7b97; <em>kA</em> &#x53ef;&#x4ee5;&#x5229;&#x7528;&#x4e00;&#x7cfb;&#x5217;&#x6570;&#x5b66;&#x65b9;&#x6cd5;&#x6765;&#x52a0;&#x901f;&#x8fd0;&#x7b97;&#xff0c;&#x7136;&#x800c;&#x53cd;&#x8fc7;&#x6765;&#x8ba1;&#x7b97; <em>k</em> &#x5177;&#x4f53;&#x662f;&#x591a;&#x5c11;&#x5c31;&#x975e;&#x5e38;&#x56f0;&#x96be;&#xff09;&#x3002;&#x5bf9;&#x4e8e;&#x653b;&#x51fb;&#x8005;&#x6765;&#x8bf4;&#xff0c;&#x65e0;&#x8bba;&#x662f; ElGamal &#x8fd8;&#x662f;&#x692d;&#x5706;&#x66f2;&#x7ebf;&#x7b97;&#x6cd5;&#xff0c;&#x5b9e;&#x9645;&#x4e0a;&#x89e3;&#x51b3;&#x7684;&#x90fd;&#x662f;&#x79bb;&#x6563;&#x5bf9;&#x6570;&#x95ee;&#x9898;&#xff0c;&#x90fd;&#x662f;&#x9700;&#x8981;&#x4ece;&#x79bb;&#x6563;&#x7684;&#x70b9;&#x4e2d;&#x9006;&#x63a8;&#x7528;&#x4e8e;&#x52a0;&#x5bc6;&#x7684;&#x51fd;&#x6570;&#x7684;&#x53c2;&#x6570;&#xff08;&#x5bc6;&#x94a5;&#x7b49;&#xff09;&#x3002;</p>
+<p>&#x692d;&#x5706;&#x66f2;&#x7ebf;&#x8fd0;&#x7b97;&#x7684;&#x56f0;&#x96be;&#x6027;&#x4e00;&#x65b9;&#x9762;&#x662f;&#x63d0;&#x5347;&#x4e86;&#x52a0;&#x5bc6;&#x7684;&#x5b89;&#x5168;&#x6027;&#xff0c;&#x53e6;&#x4e00;&#x65b9;&#x9762;&#x4e5f;&#x80fd;&#x591f;&#x7528;&#x4e8e;&#x7f29;&#x77ed;&#x5bc6;&#x94a5;&#x7684;&#x957f;&#x5ea6;&#x3002;&#x5b9e;&#x9645;&#x4e0a;&#x662f;&#x56e0;&#x4e3a;&#x692d;&#x5706;&#x66f2;&#x7ebf;&#x52a0;&#x5bc6;&#x7b97;&#x6cd5;&#x76f8;&#x5f53;&#x4e8e;&#x5728;&#x4e8c;&#x7ef4;&#x7a7a;&#x95f4;&#x4e2d;&#x751f;&#x6210;&#x5bc6;&#x94a5;&#xff0c;&#x800c;&#x6a21;&#x8fd0;&#x7b97;&#x53ea;&#x662f;&#x4e00;&#x4e2a;&#x4e00;&#x7ef4;&#x7a7a;&#x95f4;&#x7684;&#x64cd;&#x4f5c;&#x3002;&#x5bf9;&#x4e8e;&#x901a;&#x4fe1;&#x53cc;&#x65b9;&#xff0c;&#x4ed6;&#x4eec;&#x53ef;&#x4ee5;&#x5229;&#x7528;&#x5df2;&#x77e5;&#x7684;&#x51fd;&#x6570;&#x5173;&#x7cfb;&#x5c06;&#x4e8c;&#x7ef4;&#x7a7a;&#x95f4;&#x5185;&#x7684;&#x70b9;&#x4e32;&#x8054;&#x8d77;&#x6765;&#xff0c;&#x800c;&#x653b;&#x51fb;&#x8005;&#x60f3;&#x8981;&#x5728;&#x4e8c;&#x7ef4;&#x7a7a;&#x95f4;&#x5185;&#x5bfb;&#x627e;&#x89c4;&#x5f8b;&#x5c31;&#x53d8;&#x5f97;&#x66f4;&#x52a0;&#x56f0;&#x96be;&#xff1b;&#x6211;&#x4eec;&#x5c31;&#x53ef;&#x4ee5;&#x5728;&#x8fbe;&#x5230;&#x540c;&#x6837;&#x5b89;&#x5168;&#x6027;&#x8981;&#x6c42;&#x7684;&#x524d;&#x63d0;&#x4e0b;&#x4f7f;&#x7528;&#x66f4;&#x77ed;&#x7684;&#x5bc6;&#x94a5;&#xff0c;&#x4ece;&#x800c;&#x63d0;&#x9ad8;&#x52a0;&#x5bc6;&#x8fd0;&#x7b97;&#x548c;&#x5bc6;&#x94a5;&#x4f20;&#x8f93;&#x7684;&#x6548;&#x7387;&#x3002;</p>
+<h2>More Content on This</h2>
+<p>&#x63a8;&#x8350;&#x89c2;&#x770b; Computerphile &#x7684;&#x8fd9;&#x4e2a;&#x89c6;&#x9891;&#x3002;&#xff08;&#x8fd9;&#x4e2a;&#x89c6;&#x9891;&#x4e2d;&#x4e5f;&#x6709;&#x4e00;&#x5904;&#x9519;&#x8bef;&#xff0c;&#x5728; 7:32 &#x5904; Mike &#x8bf4;&#x5750;&#x6807;&#x4e2d;&#x7684; <em>x</em> &#x4e0e; <em>y</em> &#x4e2d;&#x6211;&#x4eec;&#x53ea;&#x4f7f;&#x7528;&#x5176;&#x4e2d;&#x4e00;&#x4e2a;&#x662f;&#x56e0;&#x4e3a;&#x8fd9;&#x6837;&#x505a;&#x5c31;&#x8db3;&#x591f;&#x5b89;&#x5168;&#xff0c;&#x5b9e;&#x9645;&#x4e0a;&#x53ea;&#x662f;&#x56e0;&#x4e3a;&#x5176;&#x4e2d;&#x4e00;&#x4e2a;&#x5c31;&#x5df2;&#x7ecf;&#x5305;&#x542b;&#x4e86;&#x6240;&#x6709;&#x5fc5;&#x8981;&#x7684;&#x4fe1;&#x606f;&#x3002;&#xff09;</p>
+<iframe width="100%" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/NF1pwjL9-DE" title="YouTube video player" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+  </article>
+</main>
+    <footer class="flex">
+  <a href="/">&#xa9; Harlan V. Wei (aka. Wei Chen)</a>
+  <strong></strong>
+</footer>
+  </body>
+
+</html>
